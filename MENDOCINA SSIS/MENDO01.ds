@@ -1,0 +1,10 @@
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="e0252da7-014a-40ce-beab-af25a1a3452b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>MENDO01</ID>
+  <Name>MENDO01</Name>
+  <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+  <ConnectionString>Dsn=MENDO01;uid=;pwd=</ConnectionString>
+  <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
+  <ManagedProvider>System.Data.Odbc</ManagedProvider>
+  <Timeout>PT0S</Timeout>
+</DataSource>

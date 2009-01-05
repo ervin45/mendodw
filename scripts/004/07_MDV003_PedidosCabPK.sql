@@ -1,0 +1,13 @@
+ALTER TABLE [dbo].[MDV003_Pedidos_cab] ALTER COLUMN [PEMP] numeric(2,0) NOT NULL
+GO
+ALTER TABLE [dbo].[MDV003_Pedidos_cab] ALTER COLUMN [PCOST] numeric(2,0) NOT NULL
+GO
+ALTER TABLE [dbo].[MDV003_Pedidos_cab] ALTER COLUMN [PAGENC] numeric(2,0) NOT NULL
+GO
+ALTER TABLE [dbo].[MDV003_Pedidos_cab] ALTER COLUMN [PNRPED] numeric(6,0) NOT NULL
+GO
+ALTER TABLE [dbo].[MDV003_Pedidos_cab]
+	ADD CONSTRAINT [pk_Pedidos]
+	PRIMARY KEY ([PEMP], [PCOST], [PAGENC], [PNRPED])
+GO
+

@@ -1,0 +1,203 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="42e77852-86fd-41cd-b035-82448ba8b3de" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Pedido Estado</ID>
+  <Name>Dim Pedido Estado</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2467" scrolltop="-5093" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8731" y="14605" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_PedidoEstado (dbo.Dim_PedidoEstado)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3757" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000ad0e000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_PedidoEstado" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2467</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5093</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="57154f44-8361-49e7-896a-6d97c7176a8b">
+    <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="43137009-c67f-46ac-8869-dc7eb1c22b08">
+      <ID>Dim Pedido Estado</ID>
+      <Name>Dim Pedido Estado</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>39</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="79c9893a-ad92-4369-996d-7690ed52c326">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc0b74be-579d-42df-91d9-212cd239024c">
+            <TableID>dbo_Dim_PedidoEstado</TableID>
+            <ColumnID>pedidoEstadoId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9ae13e91-b0fd-4787-8dd4-230a6fe38cc2">
+          <AttributeID>Estado</AttributeID>
+          <Name>Estado</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1d8c152e-6335-4786-9ce9-5f6b02fdaab7">
+          <AttributeID>Dias Plazo</AttributeID>
+          <Name>Dias Plazo</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="14ce42a7-d0e8-4039-b548-dc24a26437d8">
+          <AttributeID>Contado Credito</AttributeID>
+          <Name>Contado o Credito</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="550a0e5c-f75c-4e96-9efe-fe7610fdb64b">
+          <AttributeID>Distribucion</AttributeID>
+          <Name>Distribución</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="81ded03b-92b3-4bd7-9181-a085c593b551">
+      <ID>Estado</ID>
+      <Name>Estado</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1c4e2e2a-3308-46df-b2f8-ed747de30ee2">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cf1a2122-759f-4e41-8183-3cffa64a706d">
+            <TableID>dbo_Dim_PedidoEstado</TableID>
+            <ColumnID>estado</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="5963d0ce-6bca-498b-8658-a79d70098987">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d7839c3b-7298-44b0-8d13-bbc943b1a081">
+          <TableID>dbo_Dim_PedidoEstado</TableID>
+          <ColumnID>estadoDesc</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="7a9e655c-8fe6-4dd8-8ee3-1fce70389b7e">
+      <ID>Dias Plazo</ID>
+      <Name>Dias Plazo</Name>
+      <EstimatedCount>10</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d9c3ac1f-23e7-4bea-91cb-da8f2c29354d">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dafdded2-ee82-486b-b20c-0caafaad6617">
+            <TableID>dbo_Dim_PedidoEstado</TableID>
+            <ColumnID>diasPlazo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="4a76f217-c29a-4605-bac5-93718d50baa1">
+      <ID>Contado Credito</ID>
+      <Name>Contado o Credito</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3ed7bf86-548a-43b8-b95d-2a5079037c01">
+          <DataType>WChar</DataType>
+          <DataSize>1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bcf616a2-128f-4bd3-8eab-e344b1322fcf">
+            <TableID>dbo_Dim_PedidoEstado</TableID>
+            <ColumnID>contadoCredito</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="4401abc7-c2c6-44a5-a954-c59cf7d6fb35">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="faf04e36-4fc3-46e8-85b1-cbbdf059075d">
+          <TableID>dbo_Dim_PedidoEstado</TableID>
+          <ColumnID>contadoCreditoDesc</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="816fd951-f75d-4a99-9f98-6113d5f1064d">
+      <ID>Distribucion</ID>
+      <Name>Distribución</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0fdc65e3-5fa5-47a8-9647-5570adc8ea53">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b0870f83-c230-4a9e-a493-319d1ad1c57b">
+            <TableID>dbo_Dim_PedidoEstado</TableID>
+            <ColumnID>distribucion</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e2aebedd-0a77-4e16-b7fa-54bc30934d20">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="cac239b5-220a-4817-9af6-d8123b0963bf">
+          <TableID>dbo_Dim_PedidoEstado</TableID>
+          <ColumnID>distribucionDesc</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+  </Attributes>
+</Dimension>

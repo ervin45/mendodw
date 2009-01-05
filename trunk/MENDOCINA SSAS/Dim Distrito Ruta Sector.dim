@@ -1,0 +1,252 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="87499b6d-9f6b-496d-86c9-c4b72e22276f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Distrito Ruta Sector</ID>
+  <Name>Dim Distrito Ruta Sector</Name>
+  <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1990" scrolltop="-4538" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7779" y="12330" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_DistritoRutaSector (dbo.Dim_DistritoRutaSector)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4710" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800006612000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_DistritoRutaSector" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1990</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4538</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="70c2e292-816d-43a7-a0ab-15d6a7262087">
+    <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="50212b35-eccf-48a2-86ee-da9297a882b9">
+      <ID>Dim Distrito Ruta Sector</ID>
+      <Name>Dim Distrito Ruta Sector</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>527</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2cc198cc-c468-47ae-aa96-79587aa20ae2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cfae388e-e399-4750-9df4-a3bdb6ea4b1f">
+            <TableID>dbo_Dim_DistritoRutaSector</TableID>
+            <ColumnID>distritoRutaSectorId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c001d1fe-3310-4a94-9c2b-abf08f07f700">
+          <AttributeID>Sector Nombre</AttributeID>
+          <Name>Sector</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b1630f25-7da5-44e8-b91e-f34f9b861e10">
+          <AttributeID>Empresa Sucursal Agencia FK</AttributeID>
+          <Name>EmpresaSucursalAgenciaFK</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>FilteredList</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="3f6e6855-b5ce-468e-b101-43089cb0bba8">
+      <ID>Distrito Nombre</ID>
+      <Name>Distrito</Name>
+      <EstimatedCount>9</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="85c085d1-aef5-4b5c-bce9-860504188ae3">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c89a5397-9542-489f-84d2-5a4599a2bd42">
+            <TableID>dbo_Dim_DistritoRutaSector</TableID>
+            <ColumnID>distritoId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="9dbf1c8d-69ba-49a3-8ae2-412d8e35e0d6">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="1c7c00f0-5504-4a0c-95e3-50e222eb556f">
+          <TableID>dbo_Dim_DistritoRutaSector</TableID>
+          <ColumnID>distritoNombre</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="9971f183-1220-483f-98e3-5446cfe2a599">
+      <ID>Ruta Nombre</ID>
+      <Name>Ruta</Name>
+      <EstimatedCount>48</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="90089963-68bb-4f55-b606-24310f9669a9">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="93c82ddf-b144-4766-99ea-dde3e3fae8ec">
+            <TableID>dbo_Dim_DistritoRutaSector</TableID>
+            <ColumnID>distritoId</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="838621e9-d2f2-4272-80de-f24a2957e993">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5cbd81ef-3188-4ba7-b369-c0733d082f6c">
+            <TableID>dbo_Dim_DistritoRutaSector</TableID>
+            <ColumnID>rutaId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b39990b3-776a-4ce9-baa0-119639e3ee69">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="71f1e67b-f39e-4147-b0db-dade76a0bff2">
+          <TableID>dbo_Dim_DistritoRutaSector</TableID>
+          <ColumnID>rutaNombre</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="67c25cde-e514-4d99-95fb-1f7c71be6b60">
+          <AttributeID>Distrito Nombre</AttributeID>
+          <Name>Distrito</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="82d7028a-0a85-43d7-8767-fa3c64ca30e3">
+      <ID>Sector Nombre</ID>
+      <Name>Sector</Name>
+      <EstimatedCount>6</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="431c6272-ea16-4a9c-b240-da836b3feb1e">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f1a4b5d-c0e9-4d5b-ae92-e9e9485f92fb">
+            <TableID>dbo_Dim_DistritoRutaSector</TableID>
+            <ColumnID>distritoId</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ed1cc6df-2d42-4c93-91df-ccd1f5821343">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9f0974b3-afe5-4c14-afed-b6b83bfeddc7">
+            <TableID>dbo_Dim_DistritoRutaSector</TableID>
+            <ColumnID>rutaId</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="3be799d0-1a13-4b36-bd58-806cb0fc5775">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5896997f-9f28-4c50-9d85-7722d617adea">
+            <TableID>dbo_Dim_DistritoRutaSector</TableID>
+            <ColumnID>sectorId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1f791ae9-f47f-45a6-bdb8-2da7a6f1e613">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="50f23f80-e58a-4eaf-997c-58861e22ea3e">
+          <TableID>dbo_Dim_DistritoRutaSector</TableID>
+          <ColumnID>sectorNombre</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d9d43f82-4980-44b8-a81a-389085e77175">
+          <AttributeID>Ruta Nombre</AttributeID>
+          <Name>Ruta</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="92be80e0-0877-461a-b28b-3aa742273c85">
+      <ID>Empresa Sucursal Agencia FK</ID>
+      <Name>EmpresaSucursalAgenciaFK</Name>
+      <EstimatedCount>1</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5644839a-9a07-4bd4-80e4-3ca0cf8e1de5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6940da2f-5d0c-440c-9b78-e727b96d96aa">
+            <TableID>dbo_Dim_DistritoRutaSector</TableID>
+            <ColumnID>empresaSucursalAgenciaFK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="04e283d5-79ee-4b8f-bd38-b5fa66ccbe10">
+      <ID>Jerarquía</ID>
+      <Name>Distrito - Ruta - Sector</Name>
+      <Levels>
+        <Level dwd:design-time-name="b310b39b-2193-4acc-9cb9-2e9b433e4229">
+          <ID>Distrito</ID>
+          <Name>Distrito</Name>
+          <SourceAttributeID>Distrito Nombre</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="dbde247f-278b-4fdd-9399-d3093c0254a9">
+          <ID>Ruta</ID>
+          <Name>Ruta</Name>
+          <SourceAttributeID>Ruta Nombre</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="fdcace0a-bc63-4a75-bd2e-162718a5bde9">
+          <ID>Sector</ID>
+          <Name>Sector</Name>
+          <SourceAttributeID>Sector Nombre</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

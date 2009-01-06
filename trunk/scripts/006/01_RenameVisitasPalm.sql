@@ -1,0 +1,1 @@
+exec sp_rename 'MDV202b_VisitasH', 'MDV202_VisitasPalm'

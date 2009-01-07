@@ -1,8 +1,9 @@
+drop table Fact_ResumenVisitasPalm
+go
 create table Fact_ResumenVisitasPalm(
    empresaSucursalAgenciaFK int not null 
      foreign key references Dim_EmpresaSucursalAgencia(EmpresaSucursalAgenciaId),
     fechafk int not null foreign  key references Dim_Fecha(fechaid),
-    clientefk int not null foreign key references Dim_Clientes(ClienteId),
     vendendorFk int not null foreign key references Dim_Vendedor(vendedorId),
     distritoRutaSectorFK int not null foreign key references Dim_DistritoRutaSector(distritoRutaSectorId),
     cantPuntosActivos int,
@@ -20,6 +21,7 @@ create table Fact_ResumenVisitasPalm(
     cantMarcaPrecio int,
     cantAfiche int,
     cantOtros int
+    primary key clustered (empresaSucursalAgenciaFK,fechafk,vendendorFk,distritoRutaSectorFK)
 )
 
 

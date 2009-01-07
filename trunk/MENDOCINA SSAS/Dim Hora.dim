@@ -1,0 +1,280 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="34948e41-be0d-419a-a767-d4f4dbd53d81" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Hora</ID>
+  <Name>Dim Hora</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2369" scrolltop="-6893" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7779" y="17780" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_Hora (dbo.Dim_Hora)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Hora" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2369</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6893</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2763e7d8-fbd7-4bd3-b605-aea255f21f8d">
+    <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="03bd871d-1b89-45da-abe3-339166809b08">
+      <ID>Dim Hora</ID>
+      <Name>Dim Hora</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0d771410-0c6a-4202-951f-8b35690dd2cc">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6e4fa8a-2ea1-45a5-a7e9-cd8733ffe8b4">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>HoraId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="acabb14c-9a82-4794-8499-bc9494750030">
+          <AttributeID>Segundo</AttributeID>
+          <Name>Segundo</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="188107df-7b60-4075-93dc-9c47d561e864">
+          <AttributeID>Hora Text</AttributeID>
+          <Name>Hora - Tiempo</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="d9c8f756-b9a1-4196-becf-091c6d29d974">
+      <ID>Hora</ID>
+      <Name>Hora</Name>
+      <EstimatedCount>24</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f2e34ddc-0baa-456b-ac1b-78bfe00de55d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="80baf6d9-0728-417e-a428-4ad8457eb139">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>hora</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="c0063307-c1e4-40e5-838b-757a7f604b24">
+      <ID>Minuto</ID>
+      <Name>Minuto</Name>
+      <EstimatedCount>60</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fcea243b-0aa3-4497-a388-ad3ec60f6a40">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4dbb4dff-bfd8-42f7-bf76-9fd32600f7f6">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>hora</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="a8072bb1-43b2-48ba-8189-70767ce2a0c1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0e55b7e4-8f18-4d64-bdab-e616930be347">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>minuto</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="166415d9-c7e1-4d62-a0b5-9d34eda1eae9">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="254458ac-9cb8-4071-b40d-b85717837bf6">
+          <TableID>dbo_Dim_Hora</TableID>
+          <ColumnID>minuto</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="16a23dd8-186e-4b61-b467-0a2a2d37f6d6">
+          <AttributeID>Hora12</AttributeID>
+          <Name>Hora12</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="033f4720-d0e7-45a8-aa81-a753a9e4a166">
+          <AttributeID>Hora</AttributeID>
+          <Name>Hora</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="625fe2c7-84b3-414d-b206-646b41f05275">
+      <ID>Segundo</ID>
+      <Name>Segundo</Name>
+      <EstimatedCount>60</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="423ee75b-2256-4818-a203-928af6e7577b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="db19a9f9-4ff5-4f04-bd82-e2f2d0d6c049">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>segundo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="cc255113-2644-4c47-9503-040c341474aa">
+      <ID>AMPM</ID>
+      <Name>AMPM</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b9a57e84-af22-43ba-afbb-e326fc73d415">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="05c18380-e01e-458e-9ee5-c9878519ab89">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>AMPM</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="df46b341-25af-44da-a1f4-f99288a7e7b6">
+      <ID>Hora12</ID>
+      <Name>Hora12</Name>
+      <EstimatedCount>12</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4acbbbcf-5a8c-47ab-aad8-d3fbd9a02d74">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="49d86d65-7e65-4e6c-8cc1-5a3bee820792">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>AMPM</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="2def62e8-bf82-454d-ab2d-3f5d20c8a295">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bd22eaec-2cfa-4391-a108-01323b4fecf7">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>hora12</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a9cc4900-91c5-41ea-ad75-972c1edacce8">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="050b949a-bcf7-4b79-9e1e-f38ea6efe866">
+          <TableID>dbo_Dim_Hora</TableID>
+          <ColumnID>hora12</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="332974d4-d08a-400c-bec9-cc7f7e53def4">
+          <AttributeID>AMPM</AttributeID>
+          <Name>AMPM</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="56abda99-6aca-4470-b5dd-5a55b40f4272">
+      <ID>Hora Text</ID>
+      <Name>Hora - Tiempo</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="01efc126-3ddc-4cf7-aed6-c03a98035577">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cbc3dbf3-6ef3-45d2-8302-567d330e11ae">
+            <TableID>dbo_Dim_Hora</TableID>
+            <ColumnID>horaText</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1172a876-634d-4e6c-b1a6-86bcc30d3bb1">
+          <AttributeID>Minuto</AttributeID>
+          <Name>Minuto</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>MandatoryFilter</InstanceSelection>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="e143a137-25bf-4c90-badd-3b2259c60cee">
+      <ID>Jerarquía</ID>
+      <Name>Hora - Minuto - Segundo</Name>
+      <Levels>
+        <Level dwd:design-time-name="5990c6a5-a426-459f-9b12-6080bfb0f87b">
+          <ID>Hora</ID>
+          <Name>Hora</Name>
+          <SourceAttributeID>Hora</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="1f09f7b4-a596-4caa-918b-d71e569a26b0">
+          <ID>Minuto</ID>
+          <Name>Minuto</Name>
+          <SourceAttributeID>Minuto</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="82476ab7-affd-449d-bc96-d0453a99fedc">
+          <ID>Hora - Tiempo</ID>
+          <Name>Segundo</Name>
+          <SourceAttributeID>Hora Text</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

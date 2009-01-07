@@ -89,6 +89,10 @@
       <Name>Dim Hora.dim</Name>
       <FullPath>Dim Hora.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Actividad Visita.dim</Name>
+      <FullPath>Dim Actividad Visita.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>

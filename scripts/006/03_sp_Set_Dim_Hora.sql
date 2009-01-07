@@ -3,7 +3,7 @@
 -- Create date: 7/02/2008
 -- Description:	Llenar las tabla hora para las horas del día
 -- =============================================
-Alter PROCEDURE [dbo].[sp_set_Dim_Hora]
+create PROCEDURE [dbo].[sp_set_Dim_Hora]
 	-- Add the parameters for the stored procedure here
 	
 AS

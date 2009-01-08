@@ -27,6 +27,16 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Resumen de Visitas.cube</Name>
+      <FullPath>Resumen de Visitas.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Resumen de Visitas.partitions</Name>
+          <FullPath>Resumen de Visitas.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>

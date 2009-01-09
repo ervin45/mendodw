@@ -9,6 +9,7 @@ create table Fact_VisitaPalm
   empresaSucursalAgenciafk int not null foreign key references Dim_EmpresaSucursalAgencia(EmpresaSucursalAgenciaId),
   vendedorfk int not null foreign key references Dim_Vendedor(vendedorid),
   actividadVisitaFk int not null foreign key references Dim_ActividadVisita(actividadVisitaId),
+  distritoRutaSector int not null foreign key references Dim_DistritoRutaSector(distritoRutaSectorid), 
   estadoVisita numeric(2,0),
   nroVisitaDD numeric(7,0) not null, 
   primary key clustered (fechafk,empresaSucursalAgenciafk,vendedorfk, nroVisitaDD)

@@ -30,3 +30,9 @@ supervisorId is null
 
 
 
+truncate table Fact_HojaDeRuta
+truncate table Fact_Pedidos
+truncate table Fact_VisitaPalm
+truncate table Fact_ResumenVisitasPalm
+
+delete from dim_distritorutasector

@@ -1,8 +1,8 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="15c6a8a0-d83c-44d4-bf4a-9e1fe394c56c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="15c6a8a0-d83c-44d4-bf4a-9e1fe394c56c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Pedidos Dsv 1</ID>
   <Name>Hoja de Ruta</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
@@ -319,7 +319,7 @@
       <Value>91</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
     <Dimension dwd:design-time-name="5641ac7e-9b22-4ab8-bc79-4eaa924528c9">
@@ -469,6 +469,9 @@
         <Attribute dwd:design-time-name="5ae4e86b-0e16-44c8-9212-811257322ecf">
           <AttributeID>Empresa Sucursal Agencia FK</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="e6266665-5929-40e6-971f-a9df5745b291">
+          <AttributeID>Supervisor Desc</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="707c4957-b27c-4ce4-a40a-01026e1d214e">
@@ -531,9 +534,9 @@
     <MeasureGroup dwd:design-time-name="45ed3f18-6110-4a62-ab0c-0ea5b6e438f3">
       <ID>Fact Hoja De Ruta</ID>
       <Name>Hoja de Ruta</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
         <Measure dwd:design-time-name="f37e7cc2-cab5-4673-8ba6-bc72dd2c1157">
@@ -693,8 +696,8 @@
     <MdxScript dwd:design-time-name="12d459d2-bdc0-497c-ab5c-5f8460510a4c">
       <ID>MdxScript</ID>
       <Name>MdxScript</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
       <Commands>
         <Command>
           <Text>/*

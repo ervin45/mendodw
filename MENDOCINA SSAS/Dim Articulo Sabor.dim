@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2797" scrolltop="-5543" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7779" y="12330" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2797" scrolltop="-5543" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7779" y="17780" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -271,7 +271,7 @@
   <Hierarchies>
     <Hierarchy dwd:design-time-name="154897a6-bcb9-41d3-9650-56ef77b5cc65">
       <ID>Jerarquía</ID>
-      <Name>Linea - Articulo</Name>
+      <Name>Linea - Presentacion</Name>
       <Levels>
         <Level dwd:design-time-name="f3c304aa-de29-4f67-a165-797aae8372e2">
           <ID>Línea</ID>
@@ -280,7 +280,7 @@
         </Level>
         <Level dwd:design-time-name="19908fdc-b577-4e26-9cd6-7c7ebcd6f500">
           <ID>Artículo</ID>
-          <Name>Artículo</Name>
+          <Name>Presentacion</Name>
           <SourceAttributeID>Articulo Nombre</SourceAttributeID>
         </Level>
       </Levels>

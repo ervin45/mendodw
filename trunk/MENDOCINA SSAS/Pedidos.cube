@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="772ff5b0-335e-4352-a15a-9ac697f862ec" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="772ff5b0-335e-4352-a15a-9ac697f862ec" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Pedidos Dsv</ID>
   <Name>Pedidos</Name>
   <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
@@ -489,6 +489,9 @@
         </Attribute>
         <Attribute dwd:design-time-name="4928d5e0-3f5b-4175-8a90-2b4611daaa30">
           <AttributeID>Empresa Sucursal Agencia FK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a6653d30-6fa2-4791-a0d3-d89fd3caf5db">
+          <AttributeID>Supervisor Desc</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>

@@ -1,14 +1,14 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="084e519c-960a-46e9-b648-5762d5530053" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="084e519c-960a-46e9-b648-5762d5530053" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Pedidos Dsv 2</ID>
   <Name>Resumen Preventa</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4713" scrolltop="-610" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="27728" y="15452" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="16" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4713" scrolltop="-610" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="17145" y="17780" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_Fecha (dbo.Dim_Fecha)" left="7836" top="-2170" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_Fecha (dbo.Dim_Fecha)" left="7836" top="-2170" logicalid="8" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="00080000b80b00009b0f0000" />
             </control>
@@ -30,7 +30,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_Vendedor (dbo.Dim_Vendedor)" left="20" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="4128" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_Vendedor (dbo.Dim_Vendedor)" left="20" top="0" logicalid="9" controlid="2" masterid="0" hint1="0" hint2="0" width="4128" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="00080000201000004d0c0000" />
             </control>
@@ -41,7 +41,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_DistritoRutaSector (dbo.Dim_DistritoRutaSector)" left="13148" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4710" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_DistritoRutaSector (dbo.Dim_DistritoRutaSector)" left="13148" top="0" logicalid="10" controlid="3" masterid="0" hint1="0" hint2="0" width="4710" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000800006612000088130000" />
             </control>
@@ -52,7 +52,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Fact_ResumenVisitasPalm (dbo.Fact_ResumenVisitasPalm)" left="7011" top="4419" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="4657" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Fact_ResumenVisitasPalm (dbo.Fact_ResumenVisitasPalm)" left="7011" top="4419" logicalid="11" controlid="4" masterid="0" hint1="0" hint2="0" width="4657" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000800003112000088130000" />
             </control>
@@ -63,7 +63,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="7389" top="1326" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="1247" height="3393" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7389" top="1326" logicalid="12" controlid="5" masterid="0" hint1="0" hint2="0" width="1247" height="3393" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -85,7 +85,7 @@
               <point x="7689" y="4419" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="3848" top="2275" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3463" height="2744" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3848" top="2275" logicalid="13" controlid="6" masterid="0" hint1="0" hint2="0" width="3463" height="2744" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -105,7 +105,7 @@
               <point x="7011" y="4719" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="11368" top="4301" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="2080" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11368" top="4301" logicalid="14" controlid="7" masterid="0" hint1="0" hint2="0" width="2080" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -161,7 +161,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
     <Dimension dwd:design-time-name="f6edeb88-d772-4ace-837f-d53273bfb961">
@@ -245,9 +245,9 @@
     <MeasureGroup dwd:design-time-name="5213dd8b-9b8c-4200-a3db-499f272c7bf6">
       <ID>Fact Resumen Visitas Palm</ID>
       <Name>Resumen Preventa</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
         <Measure dwd:design-time-name="dbdbb6d3-f374-42c7-9289-ed429505596c">
@@ -378,30 +378,6 @@
           </Source>
           <FormatString>#,#.0</FormatString>
         </Measure>
-        <Measure dwd:design-time-name="c72d0fb9-d8dc-49ab-8aa3-1713e38bc40d">
-          <ID>Altas Potenciales</ID>
-          <Name>Altas Potenciales</Name>
-          <Source dwd:design-time-name="34ba2c1e-86b7-4ab6-bf44-c5134b98bfb1">
-            <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="5d104a2f-b163-482f-b998-e13d44013717">
-              <TableID>dbo_Fact_ResumenVisitasPalm</TableID>
-              <ColumnID>altasPotenciales</ColumnID>
-            </Source>
-          </Source>
-          <FormatString>#,#</FormatString>
-        </Measure>
-        <Measure dwd:design-time-name="98b4ed8a-45e4-4ede-8091-234100f19b0c">
-          <ID>Altas Activos</ID>
-          <Name>Altas Activos</Name>
-          <Source dwd:design-time-name="a46a75be-9baa-4ca1-ad2d-41a3698d92a4">
-            <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="b7512d9c-0dbc-4a51-98ba-3c58f270e2c7">
-              <TableID>dbo_Fact_ResumenVisitasPalm</TableID>
-              <ColumnID>altasActivos</ColumnID>
-            </Source>
-          </Source>
-          <FormatString>#,#</FormatString>
-        </Measure>
         <Measure dwd:design-time-name="eb8aedda-b165-4dde-b296-43f66409f424">
           <ID>Cajas Prevendidas</ID>
           <Name>Cantidad de cajas prevendidas</Name>
@@ -410,18 +386,6 @@
             <Source xsi:type="ColumnBinding" dwd:design-time-name="19d2dfcc-d9c5-41f4-bd0a-6c2ed74e9431">
               <TableID>dbo_Fact_ResumenVisitasPalm</TableID>
               <ColumnID>cajasPrevendidas</ColumnID>
-            </Source>
-          </Source>
-          <FormatString>#,#</FormatString>
-        </Measure>
-        <Measure dwd:design-time-name="e3d0bac8-049b-46e4-9602-8fbd5fc2ed61">
-          <ID>Cant Clientes Baja</ID>
-          <Name>Cantidad de clientes baja</Name>
-          <Source dwd:design-time-name="745e2cee-a229-4b96-9348-0925fb97248c">
-            <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="ad9c2f7a-ace3-4c82-8de7-14ce28130b7e">
-              <TableID>dbo_Fact_ResumenVisitasPalm</TableID>
-              <ColumnID>cantClientesBaja</ColumnID>
             </Source>
           </Source>
           <FormatString>#,#</FormatString>
@@ -488,6 +452,7 @@
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
+      <EstimatedRows>80765</EstimatedRows>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fcb1e4d2-84f5-48ad-89bf-ff973b9d13c7">
@@ -547,9 +512,33 @@
         </Dimension>
       </Dimensions>
       <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="41b85bed-fc52-45df-988d-3f60922dfd35">
     <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
   </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="95c1d13f-e306-48fc-9570-bf77aa9ebd7a">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+El comando CALCULATE controla la agregación de celdas hoja en el cubo.
+Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cubo.
+Sólo debe editar este comando si especifica manualmente cómo se agrega el cubo.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
+ AS distinctcount([Vendedor].[Vendedor].[Vendedor].ALLMEMBERS), 
+FORMAT_STRING = "#,#", 
+NON_EMPTY_BEHAVIOR = { [Cantidad de Puntos Activos] }, 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
 </Cube>

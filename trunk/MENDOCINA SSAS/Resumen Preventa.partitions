@@ -1,0 +1,25 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c09ab470-4eb2-4adb-936b-db40ffb5d20f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Resumen Preventa</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Resumen Visitas Palm</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4bd7bb6c-5064-4002-85e7-01d363d9c2bf">
+          <ID>Fact Resumen Visitas Palm</ID>
+          <Name>Fact Resumen Visitas Palm</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="69382c44-f38d-490a-9758-99445dd347f6">
+            <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+            <TableID>dbo_Fact_ResumenVisitasPalm</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

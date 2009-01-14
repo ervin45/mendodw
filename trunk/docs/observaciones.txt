@@ -1,0 +1,1 @@
+Cambiar de carpeta la medida de cantidad de vendedores en el cubo de resumen de ventas

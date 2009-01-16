@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="13d6609a-0f62-4b0d-ba04-08121bb27ff1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Fecha Hoja de Ruta</ID>
   <Name>Dim Fecha Hoja de Ruta</Name>
   <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2369" scrolltop="-4259" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7779" y="11986" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2369" scrolltop="-4259" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10954" y="15637" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_Fecha (dbo.Dim_Fecha)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_FechaHojaDeRuta" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000f40d0000" />
             </control>
@@ -68,31 +68,31 @@
   </Annotations>
   <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="d48ecbc5-f57d-4944-a273-c9116b739de4">
     <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
   </Source>
   <Type>Time</Type>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute>
+    <Attribute dwd:design-time-name="1b6b710d-62bb-4264-bb80-a155aa57a367">
       <ID>Año</ID>
       <Name>Ano</Name>
       <Type>Years</Type>
       <EstimatedCount>26</EstimatedCount>
       <KeyColumns>
-        <KeyColumn>
+        <KeyColumn dwd:design-time-name="ab721bd1-b8ab-47fa-b6eb-cc155f9243bb">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f23c1d7e-5d17-47d7-aea1-63a3af6d3a96">
             <TableID>Dim_FechaHojaDeRuta</TableID>
             <ColumnID>Ano</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn>
+      <NameColumn dwd:design-time-name="413bc17a-eb0a-45ee-956b-32a8ad6d4a97">
         <DataType>WChar</DataType>
         <DataSize>-1</DataSize>
-        <Source xsi:type="ColumnBinding">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="393c4dc0-441e-4964-a447-17f822d030db">
           <TableID>Dim_FechaHojaDeRuta</TableID>
           <ColumnID>Ano</ColumnID>
         </Source>
@@ -100,38 +100,38 @@
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
     </Attribute>
-    <Attribute>
+    <Attribute dwd:design-time-name="c482b3e3-f272-4502-92e4-09b4ee25e93a">
       <ID>Mes</ID>
       <Name>Mes</Name>
       <Type>Months</Type>
       <EstimatedCount>302</EstimatedCount>
       <KeyColumns>
-        <KeyColumn>
+        <KeyColumn dwd:design-time-name="aa9fee63-e0ab-4088-b383-9e6d702e5690">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="36635440-c5a8-4a3f-801e-a7a293fea8f3">
             <TableID>Dim_FechaHojaDeRuta</TableID>
             <ColumnID>Ano</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn>
+        <KeyColumn dwd:design-time-name="f1462a2e-521f-4ada-b428-6f237d1aa7ab">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5233b42a-7aee-4e76-bdc7-b63d182ea811">
             <TableID>Dim_FechaHojaDeRuta</TableID>
             <ColumnID>Mes</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn>
+      <NameColumn dwd:design-time-name="8be22155-e24d-4839-bba6-b8875ff03801">
         <DataType>WChar</DataType>
-        <DataSize>20</DataSize>
-        <Source xsi:type="ColumnBinding">
+        <DataSize>3</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a8244193-572e-4df6-9037-cb2fe87ef8eb">
           <TableID>Dim_FechaHojaDeRuta</TableID>
-          <ColumnID>MesName</ColumnID>
+          <ColumnID>mesAbv</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d61c28e8-288a-4e01-b6bd-72d77001561b">
           <AttributeID>Año</AttributeID>
           <Name>Ano</Name>
         </AttributeRelationship>
@@ -139,30 +139,30 @@
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
     </Attribute>
-    <Attribute>
+    <Attribute dwd:design-time-name="7914ca3f-dd0a-4ae6-bc49-46dc977d422f">
       <ID>Fecha</ID>
       <Name>Fecha</Name>
       <Type>Days</Type>
       <EstimatedCount>9132</EstimatedCount>
       <KeyColumns>
-        <KeyColumn>
+        <KeyColumn dwd:design-time-name="dda3bf7a-4157-4640-8bf9-3f8690bfbb76">
           <DataType>Date</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d76c15c2-2a46-4738-87b6-501444472e6b">
             <TableID>Dim_FechaHojaDeRuta</TableID>
             <ColumnID>Fecha</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn>
+      <NameColumn dwd:design-time-name="5b032366-788b-457d-b641-aec997f45baa">
         <DataType>WChar</DataType>
-        <Source xsi:type="ColumnBinding">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4214407d-48fb-4637-82d9-bbd3fc67442b">
           <TableID>Dim_FechaHojaDeRuta</TableID>
           <ColumnID>FechaName</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1a5139b2-3a2e-4d11-91ef-add47cdffde5">
           <AttributeID>Mes</AttributeID>
           <Name>Mes</Name>
         </AttributeRelationship>
@@ -170,24 +170,24 @@
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
     </Attribute>
-    <Attribute>
+    <Attribute dwd:design-time-name="22818616-5a6e-43f0-9cb4-cc1e6982167d">
       <ID>Día del mes</ID>
       <Name>Dia</Name>
       <Type>DayOfMonth</Type>
       <KeyColumns>
-        <KeyColumn>
+        <KeyColumn dwd:design-time-name="a775a9ab-a1b9-46aa-adce-c709874f6a50">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3935e357-9e8d-4ba3-a072-d1670677703b">
             <TableID>Dim_FechaHojaDeRuta</TableID>
             <ColumnID>Dia</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn>
+      <NameColumn dwd:design-time-name="5d93ef0e-8e15-4f2d-8043-09ec2506345d">
         <DataType>WChar</DataType>
         <DataSize>-1</DataSize>
-        <Source xsi:type="ColumnBinding">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="39c8199e-c615-4329-ae6e-654b3de7194e">
           <TableID>Dim_FechaHojaDeRuta</TableID>
           <ColumnID>Dia</ColumnID>
         </Source>
@@ -195,35 +195,35 @@
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
     </Attribute>
-    <Attribute>
+    <Attribute dwd:design-time-name="7ffb2e1d-45cd-4b20-a6a1-a9d57c484946">
       <ID>FechaId</ID>
       <Name>FechaId</Name>
       <Usage>Key</Usage>
       <EstimatedCount>9133</EstimatedCount>
       <KeyColumns>
-        <KeyColumn>
+        <KeyColumn dwd:design-time-name="9bb04163-e684-402a-bdaa-8894dcd3817b">
           <DataType>Integer</DataType>
           <DataSize>-1</DataSize>
-          <Source xsi:type="ColumnBinding">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b77c8f63-bcd8-4baa-9fd3-0e58dbf16a21">
             <TableID>Dim_FechaHojaDeRuta</TableID>
             <ColumnID>FechaId</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn>
+      <NameColumn dwd:design-time-name="dce1845b-d03e-42ed-8582-41c58bc50ede">
         <DataType>WChar</DataType>
         <DataSize>-1</DataSize>
-        <Source xsi:type="ColumnBinding">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="54da4968-453b-4e90-a3a7-633762d7896c">
           <TableID>Dim_FechaHojaDeRuta</TableID>
           <ColumnID>FechaId</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f6a6ae2e-e412-4ada-ac31-2d853cb84010">
           <AttributeID>Fecha</AttributeID>
           <Name>Fecha</Name>
         </AttributeRelationship>
-        <AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ce4a78f3-0450-41d4-9b43-4d09a6dcb239">
           <AttributeID>Día del mes</AttributeID>
           <Name>Dia</Name>
         </AttributeRelationship>
@@ -233,21 +233,21 @@
     </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy>
+    <Hierarchy dwd:design-time-name="7ad1a57b-828a-4e97-acc4-1e17fc9f32a2">
       <ID>Ano -  Mes -  Fecha</ID>
       <Name>Ano -  Mes -  Fecha</Name>
       <Levels>
-        <Level>
+        <Level dwd:design-time-name="2100a504-b881-4307-b318-95dbdd1b3149">
           <ID>Ano</ID>
           <Name>Ano</Name>
           <SourceAttributeID>Año</SourceAttributeID>
         </Level>
-        <Level>
+        <Level dwd:design-time-name="fa6b14db-de23-453f-987d-14fe7740ae9f">
           <ID>Mes</ID>
           <Name>Mes</Name>
           <SourceAttributeID>Mes</SourceAttributeID>
         </Level>
-        <Level>
+        <Level dwd:design-time-name="bce00f7e-2bcb-4af1-9211-23d9664b336c">
           <ID>Fecha</ID>
           <Name>Fecha</Name>
           <SourceAttributeID>Fecha</SourceAttributeID>

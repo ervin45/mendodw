@@ -7252,5 +7252,25 @@
         </AggregationDesign>
       </AggregationDesigns>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Rechazo Pedido</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ae594348-5b7c-4234-b01a-922388a15a60">
+          <ID>Fact Rechazo Pedido</ID>
+          <Name>Fact Rechazo Pedido</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a64bf53a-c918-48c3-b7b5-1f755f6dfc00">
+            <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+            <TableID>dbo_Fact_RechazoPedido</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>

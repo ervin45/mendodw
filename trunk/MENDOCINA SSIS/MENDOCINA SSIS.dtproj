@@ -18,6 +18,10 @@
       <Name>MENDO01.ds</Name>
       <FullPath>MENDO01.ds</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>MENDO04.ds</Name>
+      <FullPath>MENDO04.ds</FullPath>
+    </ProjectItem>
   </DataSources>
   <DataSourceViews />
   <MiningModels />
@@ -39,11 +43,21 @@
             <Name>MENDO01</Name>
             <Value xsi:type="xsd:string">Dsn=MENDO01;uid=;pwd=</Value>
           </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>MENDO04</Id>
+            <Name>MENDO04</Name>
+            <Value xsi:type="xsd:string">Dsn=MENDO04;uid=;pwd=</Value>
+          </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionProviderMappings>
           <ConfigurationSetting>
             <Id>MENDO01</Id>
             <Name>MENDO01</Name>
+            <Value xsi:type="xsd:string">System.Data.Odbc</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>MENDO04</Id>
+            <Name>MENDO04</Name>
             <Value xsi:type="xsd:string">System.Data.Odbc</Value>
           </ConfigurationSetting>
         </ConnectionProviderMappings>
@@ -56,6 +70,11 @@
           <ConfigurationSetting>
             <Id>MENDO01</Id>
             <Name>MENDO01</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>MENDO04</Id>
+            <Name>MENDO04</Name>
             <Value xsi:type="xsd:int">1</Value>
           </ConfigurationSetting>
         </ConnectionSecurityMappings>

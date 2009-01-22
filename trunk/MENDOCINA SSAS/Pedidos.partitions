@@ -7258,9 +7258,15 @@
         <Partition dwd:design-time-name="ae594348-5b7c-4234-b01a-922388a15a60">
           <ID>Fact Rechazo Pedido</ID>
           <Name>Fact Rechazo Pedido</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+          <Annotations>
+            <Annotation>
+              <Name>AggregationPercent</Name>
+              <Value>17</Value>
+            </Annotation>
+          </Annotations>
+          <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
           <State>Unprocessed</State>
           <Source xsi:type="DsvTableBinding" dwd:design-time-name="a64bf53a-c918-48c3-b7b5-1f755f6dfc00">
             <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
@@ -7269,8 +7275,912 @@
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="f6c13284-c4f7-4c82-b6e9-1aa45ef8b88c">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="d6ca7335-6789-4175-8133-874d4042e0a2">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
+          <EstimatedRows>2005</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
       </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2009-01-22T15:32:27Z</CreatedTimestamp>
+          <LastSchemaUpdate>2009-01-22T15:32:27Z</LastSchemaUpdate>
+          <EstimatedRows>2005</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Año</AttributeID>
+                  <EstimatedCount>26</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <EstimatedCount>23</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <EstimatedCount>534</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Día del mes</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>FechaId</AttributeID>
+                  <EstimatedCount>9133</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Articulo Sabor</AttributeID>
+                  <EstimatedCount>110</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Linea Desc</AttributeID>
+                  <EstimatedCount>9</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Articulo Nombre</AttributeID>
+                  <EstimatedCount>51</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Articulo Abrev</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Capacidad</AttributeID>
+                  <EstimatedCount>8</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Sabor Nombre</AttributeID>
+                  <EstimatedCount>20</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Retornable Desc</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Nro Pedido</AttributeID>
+                  <EstimatedCount>667262</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Vendedor</AttributeID>
+                  <EstimatedCount>424</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Vendedor Id Mendo</AttributeID>
+                  <EstimatedCount>424</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nombre Vendedor</AttributeID>
+                  <EstimatedCount>422</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Direccion</AttributeID>
+                  <EstimatedCount>303</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Pedido Estado</AttributeID>
+                  <EstimatedCount>39</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Estado</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Dias Plazo</AttributeID>
+                  <EstimatedCount>10</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Contado Credito</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Distribucion</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Año</AttributeID>
+                  <EstimatedCount>26</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <EstimatedCount>302</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <EstimatedCount>9132</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Día del mes</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>FechaId</AttributeID>
+                  <EstimatedCount>9133</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Clientes</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Clientes</AttributeID>
+                  <EstimatedCount>31105</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Id Cliente Mendo</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nombre Completo</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nombre Local</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Direccion</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Telefono</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Email</AttributeID>
+                  <EstimatedCount>6</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cedula</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nit</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Empresa Sucursal Agenciafk</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cliente Ubicacionfk</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha Registrofk</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fechade Actualizacionfk</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Expendio Caracteristicafk</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                  <EstimatedCount>527</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Distrito Nombre</AttributeID>
+                  <EstimatedCount>9</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Ruta Nombre</AttributeID>
+                  <EstimatedCount>48</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Sector Nombre</AttributeID>
+                  <EstimatedCount>6</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Empresa Sucursal Agencia FK</AttributeID>
+                  <EstimatedCount>1</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Supervisor Desc</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Cliente Expendio Caracteristica</AttributeID>
+                  <EstimatedCount>24</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Tipo Mercado Desc</AttributeID>
+                  <EstimatedCount>6</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Tipo Expendio Desc</AttributeID>
+                  <EstimatedCount>22</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Caracteristica Desc</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Cliente Ubicacion</AttributeID>
+                  <EstimatedCount>14289</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Uv</AttributeID>
+                  <EstimatedCount>901</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Manzano</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Zonaid</AttributeID>
+                  <EstimatedCount>10</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Año</AttributeID>
+                  <EstimatedCount>26</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <EstimatedCount>302</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <EstimatedCount>9132</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Día del mes</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>FechaId</AttributeID>
+                  <EstimatedCount>9133</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Año</AttributeID>
+                  <EstimatedCount>26</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <EstimatedCount>302</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <EstimatedCount>9132</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Día del mes</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>FechaId</AttributeID>
+                  <EstimatedCount>9133</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Motivo Rechazo</AttributeID>
+                  <EstimatedCount>10</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Motivo Rechazo Desc</AttributeID>
+                  <EstimatedCount>10</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Articulo Sabor</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Linea Desc</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Motivo Rechazo</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Motivo Rechazo</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 6</ID>
+              <Name>Aggregation 6</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Linea Desc</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 7</ID>
+              <Name>Aggregation 7</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Linea Desc</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Motivo Rechazo</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 8</ID>
+              <Name>Aggregation 8</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Articulo Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Motivo Rechazo</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 9</ID>
+              <Name>Aggregation 9</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fecha</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation a</ID>
+              <Name>Aggregation a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Articulo Sabor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Articulo Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Codigo Pedido</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Motivo Rechazo</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
   </MeasureGroups>
 </Cube>

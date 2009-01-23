@@ -11750,5 +11750,25 @@
         </AggregationDesign>
       </AggregationDesigns>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Pedidos Objetivo Venta</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7d5a4bf1-1e8d-4c4a-8895-a5f17a26947b">
+          <ID>Fact Pedidos Objetivo Venta</ID>
+          <Name>Fact Pedidos Objetivo Venta</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="30a0cebb-bb44-493d-b17b-feed29589349">
+            <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+            <TableID>dbo_Fact_PedidosObjetivoVenta</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>

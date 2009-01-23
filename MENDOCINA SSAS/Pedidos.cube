@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-419" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="17145" y="17780" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="60" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-419" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="27728" y="14473" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -1234,40 +1234,12 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="dc357182-7fb5-486b-95ef-c6a440ab70f4">
-          <CubeDimensionID>Dim Vendedor</CubeDimensionID>
-          <MeasureGroupID>Fact Pedidos</MeasureGroupID>
-        </Dimension>
         <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="9621016c-cf25-42c4-bf06-e058870d43bb">
           <CubeDimensionID>Dim Pedido Estado</CubeDimensionID>
           <MeasureGroupID>Fact Pedidos</MeasureGroupID>
         </Dimension>
         <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="9ace8c2e-dc25-492d-a757-8f48881ebc09">
           <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-          <MeasureGroupID>Fact Pedidos</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="f677c729-b95f-494e-a96d-f2351c8fad5f">
-          <CubeDimensionID>Dim Clientes</CubeDimensionID>
-          <MeasureGroupID>Fact Pedidos</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="1317bd3d-4e6a-4c7f-a048-3b08351f7e2e">
-          <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-          <MeasureGroupID>Fact Pedidos</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="e4ed3894-1609-4553-be9f-1c3e9c03561e">
-          <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
-          <MeasureGroupID>Fact Pedidos</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="991a820e-8287-4fe8-b9d0-a912c520bed0">
-          <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
-          <MeasureGroupID>Fact Pedidos</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="f0946587-4082-435f-9f72-9bdf381d78d7">
-          <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-          <MeasureGroupID>Fact Pedidos</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="3197d72c-4bb7-480e-9e42-e92d3a37c87c">
-          <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
           <MeasureGroupID>Fact Pedidos</MeasureGroupID>
         </Dimension>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="db874d7d-c48f-4bf5-a132-eabc4aedaa60">
@@ -1281,6 +1253,108 @@
                   <Source xsi:type="ColumnBinding" dwd:design-time-name="dac10d5d-e984-4aae-ac1f-c422a397a9ae">
                     <TableID>dbo_Fact_RechazoPedido</TableID>
                     <ColumnID>motivoRechazofk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b6cc88c1-5468-49d9-9c6c-5b3269a7f6df">
+          <CubeDimensionID>Dim Clientes</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f26720af-b9a3-4b35-aa8e-0b33cbc5dd1e">
+              <AttributeID>Dim Clientes</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6f5d6ab2-b700-44f5-83ba-8bf6f3e111fe">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5807dae6-7ef5-4638-a695-9fa39d3d07dc">
+                    <TableID>dbo_Fact_RechazoPedido</TableID>
+                    <ColumnID>clientefk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dc7b34bb-a007-44d7-86d8-f6dff708abc6">
+          <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b858be44-f2e9-4bc5-91f6-7cc815ad39d4">
+              <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3bafb239-d067-44bf-a9af-25a6dcb8a55f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fe99c58f-7fc6-463d-9c2f-f4a2694c6a9a">
+                    <TableID>dbo_Fact_RechazoPedido</TableID>
+                    <ColumnID>distritorutasectorfk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="68d611c3-b365-4b9c-8d81-c91ec0403202">
+          <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4cdf7cab-55d8-4f76-acd3-8edb61c5ef17">
+              <AttributeID>Dim Cliente Expendio Caracteristica</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Clientes</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Expendio Caracteristicafk</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="aa7d57e9-b9b7-4286-9ebd-9b982d85af60">
+          <CubeDimensionID>Dim Cliente Ubicacion</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d29165f0-1a2c-42f3-915f-090977031df8">
+              <AttributeID>Dim Cliente Ubicacion</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Clientes</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Cliente Ubicacionfk</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="98483fa5-2b25-42ac-a800-05b7819bd38a">
+          <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="772a5140-2ad5-44a8-aa7d-1d7380513ebc">
+              <AttributeID>FechaId</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Clientes</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Fecha Registrofk</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="59f311f1-bd81-408b-a88e-a366ce1d9e87">
+          <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="59e9ddd1-73dc-405d-8c99-e848645c4477">
+              <AttributeID>FechaId</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Dim Clientes</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Fechade Actualizacionfk</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="41348b46-92a4-48fc-b4de-ac73006e9d4c">
+          <CubeDimensionID>Dim Vendedor</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b160c1ac-48d4-4b8f-ab83-19e09f1d7cb5">
+              <AttributeID>Dim Vendedor</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6c9018f6-3d9c-457f-b346-566f8272eb4a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3a4d540c-61f0-4adf-8f54-f58488c10e1d">
+                    <TableID>dbo_Fact_RechazoPedido</TableID>
+                    <ColumnID>vendedorfk</ColumnID>
                   </Source>
                 </KeyColumn>
               </KeyColumns>

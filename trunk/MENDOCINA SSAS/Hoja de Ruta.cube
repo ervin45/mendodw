@@ -587,6 +587,17 @@
       </Hierarchies>
     </Dimension>
   </Dimensions>
+  <CubePermissions>
+    <CubePermission dwd:design-time-name="b9c4f1b3-d833-48b0-bff2-2ac6ee0dc63c">
+      <ID>CubePermission</ID>
+      <Name>CubePermission</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+  </CubePermissions>
   <MeasureGroups>
     <MeasureGroup dwd:design-time-name="45ed3f18-6110-4a62-ab0c-0ea5b6e438f3">
       <ID>Fact Hoja De Ruta</ID>
@@ -755,8 +766,6 @@
           <Materialization>Regular</Materialization>
         </Dimension>
       </Dimensions>
-      <Partitions />
-      <AggregationDesigns />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="d73947fd-24fd-44f0-bf3c-4ef3c39062fb">

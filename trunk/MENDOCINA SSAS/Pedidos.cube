@@ -907,6 +907,17 @@
       </Attributes>
     </Dimension>
   </Dimensions>
+  <CubePermissions>
+    <CubePermission dwd:design-time-name="45c654d8-8db2-43f5-ac47-94d72444ffe4">
+      <ID>CubePermission</ID>
+      <Name>CubePermission</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Read>Allowed</Read>
+      <ReadSourceData>None</ReadSourceData>
+    </CubePermission>
+  </CubePermissions>
   <MeasureGroups>
     <MeasureGroup dwd:design-time-name="65bec2ae-4955-4702-b3d8-5a3a621f96fa">
       <ID>Fact Pedidos</ID>
@@ -1178,8 +1189,6 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions />
-      <AggregationDesigns />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="65dc1859-00e2-484c-b982-dc5cf51b3f08">
       <ID>Fact Rechazo Pedido</ID>
@@ -1414,8 +1423,6 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions />
-      <AggregationDesigns />
       <ProactiveCaching dwd:design-time-name="4970597a-f405-4fde-bebb-67240abcf3c2">
         <SilenceInterval>-PT1S</SilenceInterval>
         <Latency>-PT1S</Latency>
@@ -1430,9 +1437,9 @@
     <MeasureGroup dwd:design-time-name="8fe0ca81-ca5d-455f-9e11-c7ec6c3b5861">
       <ID>Fact Pedidos Objetivo Venta</ID>
       <Name>Objetivos</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
         <Measure dwd:design-time-name="42c2c53d-6e38-4ea1-90ff-56e3b5d200f9">
@@ -1489,7 +1496,6 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="d5a0a707-4088-4683-b900-6ea4849c4e8f">

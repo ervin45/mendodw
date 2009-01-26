@@ -134,6 +134,12 @@
       <FullPath>Pedidos_dsv.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <Roles>
+    <ProjectItem>
+      <Name>Todos.role</Name>
+      <FullPath>Todos.role</FullPath>
+    </ProjectItem>
+  </Roles>
   <Configurations>
     <Configuration>
       <Name>Development</Name>

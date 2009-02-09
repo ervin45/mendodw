@@ -7,5 +7,4 @@ go
 exec sp_rename 'MDV004b_Pedidos_detH', 'MDV004_Pedidos_det'
 
 delete from MDV003_Pedidos_cab
-where year(PFECHA)<>2008
-or month(PFECHA)<=10
+where PFECHA<'01/7/2008'

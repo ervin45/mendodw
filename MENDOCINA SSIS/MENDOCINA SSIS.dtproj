@@ -113,8 +113,8 @@
       <References />
     </DtsPackage>
     <DtsPackage>
-      <Name>L_PEDIDOS.dtsx</Name>
-      <FullPath>L_PEDIDOS.dtsx</FullPath>
+      <Name>L_PEDIDOSCUBE.dtsx</Name>
+      <FullPath>L_PEDIDOSCUBE.dtsx</FullPath>
       <References />
     </DtsPackage>
   </DTSPackages>

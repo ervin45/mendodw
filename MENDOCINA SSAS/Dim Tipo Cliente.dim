@@ -72,6 +72,17 @@
     <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
   </Source>
   <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission dwd:design-time-name="5e4efe5c-5902-411a-a675-7c7d7d83e31b">
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 1</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+  </DimensionPermissions>
   <Attributes>
     <Attribute dwd:design-time-name="539f4905-232b-4c1c-8f74-cafcc4269d05">
       <ID>Dim Tipo Cliente</ID>

@@ -139,6 +139,10 @@
       <Name>Todos.role</Name>
       <FullPath>Todos.role</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Local.role</Name>
+      <FullPath>Local.role</FullPath>
+    </ProjectItem>
   </Roles>
   <Configurations>
     <Configuration>

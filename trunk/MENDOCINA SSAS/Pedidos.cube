@@ -1461,6 +1461,7 @@
               <ColumnID>objetivo</ColumnID>
             </Source>
           </Source>
+          <Visible>false</Visible>
           <FormatString>#,#</FormatString>
         </Measure>
       </Measures>
@@ -1523,33 +1524,37 @@ El comando CALCULATE controla la agregación de celdas hoja en el cubo.
 Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cubo.
 Sólo debe editar este comando si especifica manualmente cómo se agrega el cubo.
 */
-CALCULATE;       
+CALCULATE;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
-VISIBLE = 1  ;       
+VISIBLE = 1;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
  AS distinctcount(filter([Vendedor].[Vendedor].[All].children,[cantidad articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
-VISIBLE = 1  ;     
+VISIBLE = 1;      
 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;   
+VISIBLE = 1;    
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos con rechazos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Cantidad articulos rechazados]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;   
+VISIBLE = 1;    
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes con rechazos]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,
 [Cantidad articulos rechazados]&gt;0)
 ), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1; </Text>
+VISIBLE = 1; 
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Cajas Objetivo]
+ AS [Cantidad de Articulos Objetivo]/24, 
+FORMAT_STRING = "#,#.0", 
+VISIBLE = 1  ; </Text>
         </Command>
       </Commands>
       <CalculationProperties>

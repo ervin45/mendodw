@@ -1,0 +1,12 @@
+﻿<Role xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c56d582b-d772-42ea-9103-2224a6bbd76b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Role 1</ID>
+  <Name>PedidosLocal</Name>
+  <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+  <Description></Description>
+  <Members>
+    <Member>
+      <Name>nmonasterio</Name>
+    </Member>
+  </Members>
+</Role>

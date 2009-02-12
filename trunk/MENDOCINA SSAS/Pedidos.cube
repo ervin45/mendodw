@@ -1528,11 +1528,13 @@ CALCULATE;
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
-VISIBLE = 1;        
+NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
+VISIBLE = 1  ;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
  AS distinctcount(filter([Vendedor].[Vendedor].[All].children,[cantidad articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
-VISIBLE = 1;      
+NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
+VISIBLE = 1  ;      
 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Cantidad Articulos]&gt;0)), 
@@ -1554,6 +1556,7 @@ VISIBLE = 1;
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Cajas Objetivo]
  AS [Cantidad de Articulos Objetivo]/24, 
 FORMAT_STRING = "#,#.0", 
+NON_EMPTY_BEHAVIOR = { [Cantidad de Articulos Objetivo] }, 
 VISIBLE = 1  ; </Text>
         </Command>
       </Commands>

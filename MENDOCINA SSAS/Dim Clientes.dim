@@ -110,34 +110,6 @@
           <AttributeID>Id Cliente Mendo</AttributeID>
           <Name>Codigo Cliente</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7594121c-2ef3-4945-ad63-10cc55aa243c">
-          <AttributeID>Nombre Completo</AttributeID>
-          <Name>Nombre Completo</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="9b926bc8-e42a-405b-bf97-a9c45196a31c">
-          <AttributeID>Nombre Local</AttributeID>
-          <Name>Nombre Local</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="ad74a5ac-de54-40ab-9161-fdf90df6ecc1">
-          <AttributeID>Direccion</AttributeID>
-          <Name>Direccion</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="f99e7dd5-f15e-4aff-bf25-a271ed14b04b">
-          <AttributeID>Telefono</AttributeID>
-          <Name>Telefono</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="8355ac50-eb49-4a94-b80d-2c4a5a085326">
-          <AttributeID>Email</AttributeID>
-          <Name>Email</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="633fb006-191f-41c8-b552-f9714620ed99">
-          <AttributeID>Cedula</AttributeID>
-          <Name>Cedula</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="b660960d-0757-4325-b0bc-ffbf13c2c816">
-          <AttributeID>Nit</AttributeID>
-          <Name>NIT</Name>
-        </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="ead45557-40f6-45dc-a8bf-e3d7604240de">
           <AttributeID>Empresa Sucursal Agenciafk</AttributeID>
           <Name>Empresa Sucursal Agenciafk</Name>
@@ -165,6 +137,7 @@
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <InstanceSelection>MandatoryFilter</InstanceSelection>
     </Attribute>
     <Attribute dwd:design-time-name="5038e59c-3d5d-442e-81a3-8be7193bbdb3">
@@ -179,8 +152,37 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="865d36be-e630-4b67-867f-6f1e6f96ad57">
+          <AttributeID>Cedula</AttributeID>
+          <Name>Cedula</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e3414c1d-2e61-409c-a175-626908545c0a">
+          <AttributeID>Direccion</AttributeID>
+          <Name>Direccion</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4efc58d3-e9fc-494f-a85d-f455bb7518b2">
+          <AttributeID>Email</AttributeID>
+          <Name>Email</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cfc17e83-5c77-4b28-8aed-16c96d39b4d2">
+          <AttributeID>Nit</AttributeID>
+          <Name>NIT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7a9733f5-3863-4563-8475-cf143c939001">
+          <AttributeID>Nombre Completo</AttributeID>
+          <Name>Nombre Completo</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e7dbfbdf-36b1-4edd-a845-5029244986f5">
+          <AttributeID>Nombre Local</AttributeID>
+          <Name>Nombre Local</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="78b10344-841a-40f1-8bb6-a1c1bdb1df65">
+          <AttributeID>Telefono</AttributeID>
+          <Name>Telefono</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <InstanceSelection>MandatoryFilter</InstanceSelection>
     </Attribute>
     <Attribute dwd:design-time-name="518a09a5-ea18-4ba4-bf53-4aa44ea3d4bd">

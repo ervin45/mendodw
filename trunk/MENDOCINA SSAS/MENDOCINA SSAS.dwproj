@@ -140,8 +140,8 @@
       <FullPath>Todos.role</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Local.role</Name>
-      <FullPath>Local.role</FullPath>
+      <Name>PedidosLocal.role</Name>
+      <FullPath>PedidosLocal.role</FullPath>
     </ProjectItem>
   </Roles>
   <Configurations>

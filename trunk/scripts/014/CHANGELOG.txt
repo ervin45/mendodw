@@ -1,13 +1,7 @@
 
-
-1 . Importar datos del as/400 a una tabla "Consulta" con el siguiente slq:
-
-SELECT C3EMP, C3COST, C3AGEN, C3NRCLI, C3DISTR, C3RUTA, C3SECTOR, C3INTCAL, C3TIPCL  from MDV168
-WHERE CTIPCLIA <>  'A'
-
-2 . Ejecutar Scripts sql en orden
-3 . Reemplazar E_PEDIDOS.dtsx
-4 . Hacer un deploy de la base de datos de analisis
+1 . Ejecutar Scripts sql en orden
+2 . Reemplazar T_PEDIDOS.dtsx
+3 . Hacer un deploy de la base de datos de analisis
 
 
 cambios realizados:

@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-419" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="17145" y="17806" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-418" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18944" y="11827" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -556,7 +556,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-419</Value>
+      <Value>-418</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -973,12 +973,11 @@
               <ColumnID>DescuentoBs</ColumnID>
             </Source>
           </Source>
-          <Visible>false</Visible>
-          <FormatString>#,#.00</FormatString>
+          <FormatString>#,#</FormatString>
         </Measure>
         <Measure dwd:design-time-name="e39d19a6-7079-4640-9899-981379db324b">
           <ID>Total Bs</ID>
-          <Name>Total Bs</Name>
+          <Name>Total Bs sin Descuento</Name>
           <Source dwd:design-time-name="3a170262-2cad-41f9-a343-1647af9af972">
             <DataType>Double</DataType>
             <Source xsi:type="ColumnBinding" dwd:design-time-name="4368d35e-495e-475a-896c-0ad56676bc1b">
@@ -986,7 +985,7 @@
               <ColumnID>TotalBs</ColumnID>
             </Source>
           </Source>
-          <FormatString>#,#.00</FormatString>
+          <FormatString>#,#</FormatString>
         </Measure>
         <Measure dwd:design-time-name="f07dc163-a34f-4d09-ab76-4ae696402d60">
           <ID>Cantidad Cajas</ID>
@@ -999,6 +998,19 @@
             </Source>
           </Source>
           <FormatString>#,#.0</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="02368a59-f92c-468d-922e-6202650c18d6">
+          <ID>Monto Total</ID>
+          <Name>Total Bs con Descuento</Name>
+          <Description>Total - Dcto.</Description>
+          <Source dwd:design-time-name="6e57c9e1-0a21-4ce8-9ec5-b6a091296a68">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1b0e64f2-6b5f-4120-a83d-0bdb89fa1eac">
+              <TableID>dbo_Fact_Pedidos</TableID>
+              <ColumnID>MontoTotal</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#</FormatString>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
@@ -1200,6 +1212,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="65dc1859-00e2-484c-b982-dc5cf51b3f08">
       <ID>Fact Rechazo Pedido</ID>
@@ -1434,6 +1448,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
       <ProactiveCaching dwd:design-time-name="4970597a-f405-4fde-bebb-67240abcf3c2">
         <SilenceInterval>-PT1S</SilenceInterval>
         <Latency>-PT1S</Latency>
@@ -1468,6 +1484,7 @@
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
+      <EstimatedRows>7195</EstimatedRows>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
         <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1ef295c0-8ce9-4117-8d63-f472dc251e5c">
@@ -1508,6 +1525,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="d5a0a707-4088-4683-b900-6ea4849c4e8f">
@@ -1526,71 +1545,149 @@ El comando CALCULATE controla la agregación de celdas hoja en el cubo.
 Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cubo.
 Sólo debe editar este comando si especifica manualmente cómo se agrega el cubo.
 */
-CALCULATE;         
+CALCULATE;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;         
+VISIBLE = 1;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
  AS distinctcount(filter([Vendedor].[Vendedor].[All].children,[cantidad articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;       
+VISIBLE = 1;        
 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;     
+VISIBLE = 1;      
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos con rechazos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Cantidad articulos rechazados]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;     
+VISIBLE = 1;      
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes con rechazos]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,
 [Cantidad articulos rechazados]&gt;0)
 ), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Cajas Objetivo]
  AS [Cantidad de Articulos Objetivo]/24, 
 FORMAT_STRING = "#,#.0", 
 NON_EMPTY_BEHAVIOR = { [Cantidad de Articulos Objetivo] }, 
-VISIBLE = 1; </Text>
+VISIBLE = 1; 
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Total Bs con descuento y rechazos]
+ AS [Measures].[Total Bs con Descuento]-[Measures].[Total Bs rechazado], 
+FORMAT_STRING = "#,#", 
+NON_EMPTY_BEHAVIOR = { [Total Bs con Descuento], [Total Bs rechazado] }, 
+VISIBLE = 1  ; </Text>
         </Command>
       </Commands>
       <CalculationProperties>
-        <CalculationProperty dwd:design-time-name="599aaeea-cd7d-4484-8987-2cdb11838b63">
+        <CalculationProperty dwd:design-time-name="99c6c011-8e5d-4457-8a55-61736821048d">
           <CalculationReference>[MEASURES].[Cantidad de Clientes]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="c354e401-9d46-4557-a02b-6123c8fb8272">
+        <CalculationProperty dwd:design-time-name="676ad3c1-b6c1-42bc-b4aa-18c3e0016afb">
           <CalculationReference>[MEASURES].[Cantidad de Vendedores]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="e67cd97c-0497-4a7e-88a7-1ef676e7b25c">
+        <CalculationProperty dwd:design-time-name="3ca126bd-a290-4ea4-9d97-e2e6497ac2c2">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="786850b7-c65e-4469-8326-e8f4d3d69992">
+        <CalculationProperty dwd:design-time-name="fafe516e-43db-4537-96ff-720648e6a5ae">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="999472c6-0189-466d-ae45-0a0e005959f4">
+        <CalculationProperty dwd:design-time-name="b6ff3357-05ec-4159-b082-be267a3ad8a4">
           <CalculationReference>[MEASURES].[Cantidad de Clientes con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="ca55606b-acf2-4e99-86d1-db49d71b9578">
+          <CalculationReference>[MEASURES].[Cantidad de Cajas Objetivo]</CalculationReference>
+          <CalculationType>Member</CalculationType>
+          <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="8341d07a-2dc5-4c92-9f7e-a5026006a134">
+          <CalculationReference>[MEASURES].[Total Bs con descuento y rechazos]</CalculationReference>
+          <CalculationType>Member</CalculationType>
+          <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
+        </CalculationProperty>
       </CalculationProperties>
     </MdxScript>
   </MdxScripts>
+  <Kpis>
+    <Kpi dwd:design-time-name="0273eeab-228b-42d6-b899-dd6c9525b4f5">
+      <ID>KPI</ID>
+      <Name>Cumplimiento de cajas prevendidas</Name>
+      <Description>Cumplimiento de la preventa de cajas contra el objetivo diario de venta por ruta</Description>
+      <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
+      <Value>([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])</Value>
+      <Goal>1.5</Goal>
+      <Status>Case
+when isEmpty([Measures].[Cantidad de Cajas Objetivo])
+or isEmpty([Measures].[Cantidad Cajas])
+then null
+when
+([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+ &gt;= 1.5
+then
+1
+when
+((([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+ &lt; 1.5)
+and
+([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])&gt;=1)
+
+then 0
+else -1
+end</Status>
+      <Trend>Case
+when isEmpty([Measures].[Cantidad de Cajas Objetivo])
+or isEmpty([Measures].[Cantidad Cajas])
+then null
+When IsEmpty([Pedido - Fecha].[Ano -  Mes -  Fecha].PrevMember)
+
+then 1 
+when
+(([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+-
+(
+([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
+[Measures].[Cantidad Cajas])
+
+/
+([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
+[Measures].[Cantidad de Cajas Objetivo])
+))&lt;-1
+then -1
+else
+([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+-
+(
+([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
+[Measures].[Cantidad Cajas])
+
+/
+([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
+[Measures].[Cantidad de Cajas Objetivo])
+)
+end
+</Trend>
+      <Weight></Weight>
+      <TrendGraphic>Status Arrow - Ascending</TrendGraphic>
+      <StatusGraphic>Traffic Light</StatusGraphic>
+    </Kpi>
+  </Kpis>
   <Actions>
     <Action xsi:type="StandardAction" dwd:design-time-name="9059e126-fd6d-4996-ba7d-600e9b5cbdd9">
       <ID>Acción</ID>

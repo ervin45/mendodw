@@ -24,26 +24,26 @@
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="1a03729b-ff38-4e59-a901-4e1cb88b5a65">
+          <ProactiveCaching dwd:design-time-name="58d7db41-df2c-4031-bb09-fa172d7b7085">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
             <AggregationStorage>MolapOnly</AggregationStorage>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="1211a713-0902-46df-b22f-19d63058906f">
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="c0006c6d-69fe-40a5-92c6-9809752d6d05">
               <NotificationTechnique>Server</NotificationTechnique>
             </Source>
           </ProactiveCaching>
           <EstimatedRows>2593048</EstimatedRows>
-          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+          <AggregationDesignID>AggregationDesign 1</AggregationDesignID>
         </Partition>
       </Partitions>
       <AggregationDesigns>
         <AggregationDesign>
-          <ID>AggregationDesign</ID>
-          <Name>AggregationDesign</Name>
-          <CreatedTimestamp>2009-01-23T04:38:04Z</CreatedTimestamp>
-          <LastSchemaUpdate>2009-01-23T04:38:04Z</LastSchemaUpdate>
+          <ID>AggregationDesign 1</ID>
+          <Name>AggregationDesign 1</Name>
+          <CreatedTimestamp>2009-02-15T03:22:56Z</CreatedTimestamp>
+          <LastSchemaUpdate>2009-02-15T03:22:56Z</LastSchemaUpdate>
           <EstimatedRows>2593048</EstimatedRows>
           <Dimensions>
             <Dimension>
@@ -762,11 +762,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -784,6 +779,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -819,6 +819,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -836,11 +841,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -1223,6 +1223,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -1237,11 +1242,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -1285,11 +1285,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -1304,6 +1299,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -1466,11 +1466,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -1490,6 +1485,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -1528,6 +1528,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -1547,11 +1552,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -1818,11 +1818,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -1840,6 +1835,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -1875,6 +1875,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -1892,11 +1897,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -1994,11 +1994,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -2018,6 +2013,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -2056,6 +2056,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -2075,11 +2080,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -2564,6 +2564,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -2581,11 +2586,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -2621,11 +2621,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -2643,6 +2638,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -2953,6 +2953,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -2970,11 +2975,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -3010,11 +3010,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -3032,6 +3027,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -3124,6 +3124,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -3138,11 +3143,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -3186,11 +3186,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -3205,6 +3200,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -3490,14 +3490,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -3552,14 +3552,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -3719,6 +3719,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -3741,11 +3746,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -3776,11 +3776,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -3803,6 +3798,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -4702,14 +4702,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -4764,14 +4764,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -4874,11 +4874,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -4888,6 +4883,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -4926,6 +4926,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -4938,11 +4943,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -4987,14 +4987,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Mes</AttributeID>
                     </Attribute>
                   </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -5087,6 +5087,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -5099,11 +5104,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -5191,11 +5191,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -5208,6 +5203,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -5243,11 +5243,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -5267,6 +5262,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -5367,6 +5367,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -5386,11 +5391,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -5486,11 +5486,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -5513,6 +5508,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -5548,6 +5548,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -5562,11 +5567,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -5629,14 +5629,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -5674,7 +5674,7 @@
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Mes</AttributeID>
+                      <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -5688,7 +5688,7 @@
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Año</AttributeID>
+                      <AttributeID>Mes</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -5724,11 +5724,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -5738,6 +5733,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -5778,7 +5778,7 @@
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Año</AttributeID>
+                      <AttributeID>Mes</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -5790,14 +5790,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -5828,6 +5828,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -5837,17 +5842,12 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Mes</AttributeID>
+                      <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -5894,14 +5894,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Mes</AttributeID>
                     </Attribute>
                   </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -5943,7 +5943,7 @@
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Mes</AttributeID>
+                      <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -5951,7 +5951,7 @@
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Año</AttributeID>
+                      <AttributeID>Mes</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -6321,11 +6321,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -6353,6 +6348,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -6383,6 +6383,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -6410,11 +6415,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -6668,11 +6668,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -6682,6 +6677,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -6734,14 +6734,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -6782,6 +6782,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -6794,11 +6799,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -6839,11 +6839,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>FechaId</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -6853,6 +6848,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>FechaId</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
@@ -6886,6 +6886,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Fecha Vencimiento</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>FechaId</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
@@ -6898,11 +6903,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>FechaId</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -6942,14 +6942,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Cliente - Fecha Registrofk</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>FechaId</AttributeID>
                     </Attribute>
                   </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Cliente - Fechade Actualizacionfk</CubeDimensionID>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Cliente Expendio Caracteristica</CubeDimensionID>
@@ -11756,9 +11756,15 @@
         <Partition dwd:design-time-name="7d5a4bf1-1e8d-4c4a-8895-a5f17a26947b">
           <ID>Fact Pedidos Objetivo Venta</ID>
           <Name>Fact Pedidos Objetivo Venta</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+          <Annotations>
+            <Annotation>
+              <Name>AggregationPercent</Name>
+              <Value>68</Value>
+            </Annotation>
+          </Annotations>
+          <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
           <State>Unprocessed</State>
           <Source xsi:type="DsvTableBinding" dwd:design-time-name="30a0cebb-bb44-493d-b17b-feed29589349">
             <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
@@ -11767,8 +11773,226 @@
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="ae4a05da-4fbc-4b8d-93d7-89e915d253f9">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="05600b54-7d89-475b-9e8e-1c6217d1dcb0">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
+          <EstimatedRows>7195</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
       </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2009-02-15T03:26:22Z</CreatedTimestamp>
+          <LastSchemaUpdate>2009-02-15T03:26:22Z</LastSchemaUpdate>
+          <EstimatedRows>7195</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                  <EstimatedCount>527</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Distrito Nombre</AttributeID>
+                  <EstimatedCount>9</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Ruta Nombre</AttributeID>
+                  <EstimatedCount>48</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Sector Nombre</AttributeID>
+                  <EstimatedCount>6</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Empresa Sucursal Agencia FK</AttributeID>
+                  <EstimatedCount>1</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Supervisor Desc</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Año</AttributeID>
+                  <EstimatedCount>26</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <EstimatedCount>23</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <EstimatedCount>534</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Día del mes</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>FechaId</AttributeID>
+                  <EstimatedCount>9133</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Fecha</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 6</ID>
+              <Name>Aggregation 6</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 7</ID>
+              <Name>Aggregation 7</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Pedido</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
     </MeasureGroup>
   </MeasureGroups>
 </Cube>

@@ -88,16 +88,6 @@
       <References />
     </DtsPackage>
     <DtsPackage>
-      <Name>E_OTROS.dtsx</Name>
-      <FullPath>E_OTROS.dtsx</FullPath>
-      <References />
-    </DtsPackage>
-    <DtsPackage>
-      <Name>E_HISTORICOS.dtsx</Name>
-      <FullPath>E_HISTORICOS.dtsx</FullPath>
-      <References />
-    </DtsPackage>
-    <DtsPackage>
       <Name>T_CLIENTE.dtsx</Name>
       <FullPath>T_CLIENTE.dtsx</FullPath>
       <References />

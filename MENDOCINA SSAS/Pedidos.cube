@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-3536" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18944" y="11827" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-3536" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18944" y="14658" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -1212,6 +1212,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="65dc1859-00e2-484c-b982-dc5cf51b3f08">
       <ID>Fact Rechazo Pedido</ID>
@@ -1446,6 +1448,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
       <ProactiveCaching dwd:design-time-name="4970597a-f405-4fde-bebb-67240abcf3c2">
         <SilenceInterval>-PT1S</SilenceInterval>
         <Latency>-PT1S</Latency>
@@ -1521,6 +1525,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="d5a0a707-4088-4683-b900-6ea4849c4e8f">
@@ -1539,81 +1545,88 @@ El comando CALCULATE controla la agregación de celdas hoja en el cubo.
 Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cubo.
 Sólo debe editar este comando si especifica manualmente cómo se agrega el cubo.
 */
-CALCULATE;          
+CALCULATE; 
+CREATE SET CURRENTCUBE.[Pedidos con Descuento]
+ AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0) ;           
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;          
+VISIBLE = 1;           
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
  AS distinctcount(filter([Vendedor].[Vendedor].[All].children,[cantidad articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;        
+VISIBLE = 1;         
 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;      
+VISIBLE = 1;       
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos con rechazos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Cantidad articulos rechazados]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;      
+VISIBLE = 1;       
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes con rechazos]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,
 [Cantidad articulos rechazados]&gt;0)
 ), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;   
+VISIBLE = 1;    
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Cajas Objetivo]
  AS [Cantidad de Articulos Objetivo]/24, 
 FORMAT_STRING = "#,#.0", 
 NON_EMPTY_BEHAVIOR = { [Cantidad de Articulos Objetivo] }, 
-VISIBLE = 1; 
+VISIBLE = 1;  
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Total Bs con descuento y rechazos]
  AS [Measures].[Total Bs con Descuento]-[Measures].[Total Bs rechazado], 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Total Bs con Descuento], [Total Bs rechazado] }, 
-VISIBLE = 1  ; </Text>
+VISIBLE = 1; </Text>
         </Command>
       </Commands>
       <CalculationProperties>
-        <CalculationProperty dwd:design-time-name="99c6c011-8e5d-4457-8a55-61736821048d">
+        <CalculationProperty dwd:design-time-name="4b4704c0-3eb0-48ab-8d80-88bbf29948f3">
           <CalculationReference>[MEASURES].[Cantidad de Clientes]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="676ad3c1-b6c1-42bc-b4aa-18c3e0016afb">
+        <CalculationProperty dwd:design-time-name="339a60db-54dc-4934-afba-3aa3c3145c72">
           <CalculationReference>[MEASURES].[Cantidad de Vendedores]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="3ca126bd-a290-4ea4-9d97-e2e6497ac2c2">
+        <CalculationProperty dwd:design-time-name="7000df37-8011-454c-b158-65282e46695b">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="fafe516e-43db-4537-96ff-720648e6a5ae">
+        <CalculationProperty dwd:design-time-name="3c5420c4-1449-4a73-b7ee-6ef858ac7d5e">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="b6ff3357-05ec-4159-b082-be267a3ad8a4">
+        <CalculationProperty dwd:design-time-name="13595861-26e2-4277-9b38-947311750ada">
           <CalculationReference>[MEASURES].[Cantidad de Clientes con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="ca55606b-acf2-4e99-86d1-db49d71b9578">
+        <CalculationProperty dwd:design-time-name="2e92700d-83bb-4021-a88a-eec36b470e17">
           <CalculationReference>[MEASURES].[Cantidad de Cajas Objetivo]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="8341d07a-2dc5-4c92-9f7e-a5026006a134">
+        <CalculationProperty dwd:design-time-name="44c99c0b-735f-4065-a397-235edcb9da41">
           <CalculationReference>[MEASURES].[Total Bs con descuento y rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
+          <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="0e0a625b-09b1-4a00-984c-16292178d8a1">
+          <CalculationReference>Pedidos con Descuento</CalculationReference>
+          <CalculationType>Set</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
       </CalculationProperties>

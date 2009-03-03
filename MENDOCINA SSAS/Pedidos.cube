@@ -802,6 +802,9 @@
         <Attribute dwd:design-time-name="8534565e-5e5b-4660-b980-65578e27943c">
           <AttributeID>Distribucion</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="647f2b76-1ab9-4c50-ba3f-cfc0826a8236">
+          <AttributeID>Descuento</AttributeID>
+        </Attribute>
       </Attributes>
     </Dimension>
     <Dimension dwd:design-time-name="64bda4cf-b814-4b34-a529-e6568e291848">
@@ -1212,8 +1215,6 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions />
-      <AggregationDesigns />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="65dc1859-00e2-484c-b982-dc5cf51b3f08">
       <ID>Fact Rechazo Pedido</ID>
@@ -1448,8 +1449,6 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions />
-      <AggregationDesigns />
       <ProactiveCaching dwd:design-time-name="4970597a-f405-4fde-bebb-67240abcf3c2">
         <SilenceInterval>-PT1S</SilenceInterval>
         <Latency>-PT1S</Latency>
@@ -1525,8 +1524,6 @@
           </Attributes>
         </Dimension>
       </Dimensions>
-      <Partitions />
-      <AggregationDesigns />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="d5a0a707-4088-4683-b900-6ea4849c4e8f">

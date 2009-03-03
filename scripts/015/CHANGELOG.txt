@@ -1,0 +1,9 @@
+
+1 . Ejecutar Scripts sql en orden
+2 . Reemplazar T_PEDIDOS.dtsx
+3 . Ejecutar MendoDW.xmla
+
+
+cambios realizados:
+
+1. Adicion de estado de pedido: Con descuento - Sin Descuento

@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-3536" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="17145" y="17754" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="75" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-2910" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="17145" y="17886" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -535,6 +535,68 @@
               <point x="6712" y="16190" />
             </connector>
           </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_TipoCliente" left="18773" top="5451" logicalid="70" controlid="38" masterid="0" hint1="0" hint2="0" width="3307" height="1858" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000eb0c000042070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Dim_TipoCliente" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="V_Fact_ClientesHojasDeRuta" left="-346" top="14520" logicalid="72" controlid="40" masterid="0" hint1="0" hint2="0" width="4032" height="2677" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000c00f0000750a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="V_Fact_ClientesHojasDeRuta" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3386" top="12535" logicalid="73" controlid="41" masterid="0" hint1="0" hint2="0" width="3469" height="2523" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[V_Fact_ClientesHojasDeRuta-Dim_DistritoRutaSector]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="40" sourceattachpoint="30" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6555" y="12934" />
+              <point x="5121" y="12934" />
+              <point x="5121" y="14758" />
+              <point x="3686" y="14758" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3386" top="5431" logicalid="74" controlid="42" masterid="0" hint1="0" hint2="0" width="15687" height="11827" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[V_Fact_ClientesHojasDeRuta-Dim_TipoCliente]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="38" destid="40" sourceattachpoint="10" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18773" y="5830" />
+              <point x="11403" y="5830" />
+              <point x="11403" y="16958" />
+              <point x="3686" y="16958" />
+            </connector>
+          </ddscontrol>
         </dds>
       </Value>
     </Annotation>
@@ -556,7 +618,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-3536</Value>
+      <Value>-2910</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -906,6 +968,46 @@
         </Attribute>
         <Attribute dwd:design-time-name="139008a7-e369-4163-82f6-d77c30e4fbd0">
           <AttributeID>Motivo Rechazo Desc</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="551400f8-ea0c-4295-8a2b-84578a8ab53b">
+      <ID>Fecha</ID>
+      <Name>Hoja de Ruta - Fecha</Name>
+      <DimensionID>Dim Fecha</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="42ba3f14-cab9-4f4a-8880-6c28b5543814">
+          <AttributeID>Año</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ad60d8a8-49aa-4de7-85ec-3fcca63a70ad">
+          <AttributeID>Mes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ad3507df-25cf-4c56-88db-912a85b93261">
+          <AttributeID>Fecha</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="08a20fbe-6194-42a4-8ef3-3a647877392a">
+          <AttributeID>Día del mes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3bf339c-38d6-41b6-acf9-03f6638a2c27">
+          <AttributeID>FechaId</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3a07a432-6653-4119-a171-2eb51e95c12f">
+          <HierarchyID>Ano -  Mes -  Fecha</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="3dbd5ce6-730b-4d39-9160-a202a0187208">
+      <ID>Dim Tipo Cliente</ID>
+      <Name>Hoja de Ruta - Tipo de Cliente</Name>
+      <DimensionID>Dim Tipo Cliente</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f5e8e952-5cb1-463f-80fb-1fab346a5d94">
+          <AttributeID>Dim Tipo Cliente</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f3d9c86a-3805-471b-9f14-694c3b315fac">
+          <AttributeID>Tipo Cliente Desc</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -1531,6 +1633,91 @@
       <Partitions />
       <AggregationDesigns />
     </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="f49301ad-d30f-4703-9a68-b99f5121c45f">
+      <ID>V Fact Clientes Hojas De Ruta</ID>
+      <Name>Hoja De Ruta</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="c834686a-536e-4eb5-9469-b98c76993e07">
+          <ID>Cantidad Clientes</ID>
+          <Name>_Cantidad Clientes en Hoja de Ruta</Name>
+          <Source dwd:design-time-name="c8d69044-b5df-484c-9670-3e9f1429e024">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="415c0253-035e-4aac-9225-10e719508789">
+              <TableID>V_Fact_ClientesHojasDeRuta</TableID>
+              <ColumnID>CantidadClientes</ColumnID>
+            </Source>
+          </Source>
+          <Visible>false</Visible>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedRows>8734</EstimatedRows>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="cea81e9e-ad3f-4b8d-8ab6-395654248b26">
+          <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="535895b9-07c1-4392-ad05-2187713474ab">
+              <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9dc9f946-5eeb-4c92-b439-29c6a5837ab8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5a3afdea-fcd4-4db2-a768-149610fd2f10">
+                    <TableID>V_Fact_ClientesHojasDeRuta</TableID>
+                    <ColumnID>distritoRutaSectorFK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dc689c38-bdc0-483e-808d-cf9f8060ce7d">
+          <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="153efe6e-8294-4309-be7d-8b0c1d1e202c">
+              <AttributeID>Dim Tipo Cliente</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c0ec46f6-70ec-4be3-b7dd-b523ee0379fb">
+                  <DataType>WChar</DataType>
+                  <DataSize>1</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="edf24120-2dd1-4e05-bca5-0e15a0879122">
+                    <TableID>V_Fact_ClientesHojasDeRuta</TableID>
+                    <ColumnID>tipoCliente</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="981f2386-3c67-479c-9382-ddf0e8c8a998">
+          <CubeDimensionID>Fecha</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e83a2629-80e2-428b-8237-8175333df8b8">
+              <AttributeID>FechaId</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f8f6d70b-25c6-473d-a2c7-894ea6051d45">
+                  <DataType>Integer</DataType>
+                  <DataSize>-1</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ca1240f8-c15f-4664-b96b-e42c47952823">
+                    <TableID>V_Fact_ClientesHojasDeRuta</TableID>
+                    <ColumnID>fechaFK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
+    </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="d5a0a707-4088-4683-b900-6ea4849c4e8f">
     <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
@@ -1548,7 +1735,7 @@ El comando CALCULATE controla la agregación de celdas hoja en el cubo.
 Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cubo.
 Sólo debe editar este comando si especifica manualmente cómo se agrega el cubo.
 */
-CALCULATE; 
+CALCULATE;   
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Articulos]
  AS Case
 // Test to avoid division by zero.
@@ -1610,47 +1797,53 @@ Else
 End, 
 FORMAT_STRING = Percent, 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1  ;  
+VISIBLE = 1;    
 CREATE SET CURRENTCUBE.[Pedidos con Descuento]
- AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0);            
+ AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0);              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;            
+VISIBLE = 1;              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
  AS distinctcount(filter([Vendedor].[Vendedor].[All].children,[cantidad articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;          
+VISIBLE = 1;            
 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;        
+VISIBLE = 1;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos con rechazos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Cantidad articulos rechazados]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;        
+VISIBLE = 1;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes con rechazos]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,
 [Cantidad articulos rechazados]&gt;0)
 ), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;     
+VISIBLE = 1;       
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Cajas Objetivo]
  AS [Cantidad de Articulos Objetivo]/24, 
 FORMAT_STRING = "#,#.0", 
 NON_EMPTY_BEHAVIOR = { [Cantidad de Articulos Objetivo] }, 
-VISIBLE = 1;   
+VISIBLE = 1;     
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Total Bs con descuento y rechazos]
  AS [Measures].[Total Bs con Descuento]-[Measures].[Total Bs rechazado], 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Total Bs con Descuento], [Total Bs rechazado] }, 
-VISIBLE = 1; </Text>
+VISIBLE = 1;     
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes en Hoja de Ruta]
+ AS (closingperiod([Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha].[Fecha],[Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha].currentmember),
+[_Cantidad Clientes en Hoja de Ruta]), 
+FORMAT_STRING = "#,#", 
+NON_EMPTY_BEHAVIOR = { [_Cantidad Clientes en Hoja de Ruta] }, 
+VISIBLE = 1  ; </Text>
         </Command>
       </Commands>
       <CalculationProperties>

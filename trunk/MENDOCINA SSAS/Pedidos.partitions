@@ -11994,5 +11994,540 @@
         </AggregationDesign>
       </AggregationDesigns>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>V Fact Clientes Hojas De Ruta</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="11b3925b-edfc-4e88-bccd-3fbc004ddfa5">
+          <ID>V Fact Clientes Hojas De Ruta</ID>
+          <Name>V Fact Clientes Hojas De Ruta</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <Annotations>
+            <Annotation>
+              <Name>AggregationPercent</Name>
+              <Value>84</Value>
+            </Annotation>
+          </Annotations>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f1471def-be38-4024-aff8-1cf2764e51bd">
+            <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+            <TableID>V_Fact_ClientesHojasDeRuta</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="129be893-f73a-4483-a664-5f0297c139d4">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="73282143-c3ee-4e59-a1e9-a93e1c9d2bbb">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
+          <EstimatedRows>8734</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2009-03-04T22:57:26Z</CreatedTimestamp>
+          <LastSchemaUpdate>2009-03-04T22:57:26Z</LastSchemaUpdate>
+          <EstimatedRows>8734</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                  <EstimatedCount>527</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Distrito Nombre</AttributeID>
+                  <EstimatedCount>9</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Ruta Nombre</AttributeID>
+                  <EstimatedCount>48</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Sector Nombre</AttributeID>
+                  <EstimatedCount>6</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Empresa Sucursal Agencia FK</AttributeID>
+                  <EstimatedCount>1</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Supervisor Desc</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Tipo Cliente</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Tipo Cliente Desc</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Fecha</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Año</AttributeID>
+                  <EstimatedCount>26</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <EstimatedCount>302</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <EstimatedCount>9132</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Día del mes</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>FechaId</AttributeID>
+                  <EstimatedCount>9133</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 6</ID>
+              <Name>Aggregation 6</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 7</ID>
+              <Name>Aggregation 7</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 8</ID>
+              <Name>Aggregation 8</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 9</ID>
+              <Name>Aggregation 9</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation a</ID>
+              <Name>Aggregation a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation b</ID>
+              <Name>Aggregation b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation c</ID>
+              <Name>Aggregation c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation d</ID>
+              <Name>Aggregation d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation e</ID>
+              <Name>Aggregation e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation f</ID>
+              <Name>Aggregation f</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 10</ID>
+              <Name>Aggregation 10</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 11</ID>
+              <Name>Aggregation 11</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>

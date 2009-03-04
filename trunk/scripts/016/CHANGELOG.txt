@@ -1,0 +1,10 @@
+
+1 . Ejecutar Scripts sql en orden
+2 . Reemplazar T_PEDIDOS.dtsx
+3 . Ejecutar MendoDW.xmla
+
+
+cambios realizados:
+
+1. Adicion de medida : cantidad de cajas con factor objetivo
+2. Correccion de KPI : Cumplimiento de objetivo 

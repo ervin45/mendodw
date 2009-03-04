@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-3536" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18944" y="14658" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-3536" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18891" y="14579" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -1015,6 +1015,18 @@
           </Source>
           <FormatString>#,#</FormatString>
         </Measure>
+        <Measure dwd:design-time-name="68bf6e78-05a4-4832-88ee-64eb9c47b49c">
+          <ID>Cantidad Cajas Factor Objetivo</ID>
+          <Name>Cantidad Cajas Factor Objetivo</Name>
+          <Source dwd:design-time-name="0148d026-fbba-4f6e-a320-c66b51daf464">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="297ac080-6743-42eb-bead-bd0548b876ce">
+              <TableID>dbo_Fact_Pedidos</TableID>
+              <ColumnID>cantidadCajasFactorObjetivo</ColumnID>
+            </Source>
+          </Source>
+          <FormatString>#,#.0</FormatString>
+        </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
       <EstimatedRows>2593048</EstimatedRows>
@@ -1215,6 +1227,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="65dc1859-00e2-484c-b982-dc5cf51b3f08">
       <ID>Fact Rechazo Pedido</ID>
@@ -1449,6 +1463,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
       <ProactiveCaching dwd:design-time-name="4970597a-f405-4fde-bebb-67240abcf3c2">
         <SilenceInterval>-PT1S</SilenceInterval>
         <Latency>-PT1S</Latency>
@@ -1524,6 +1540,8 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
   </MeasureGroups>
   <Source dwd:design-time-name="d5a0a707-4088-4683-b900-6ea4849c4e8f">
@@ -1637,43 +1655,43 @@ VISIBLE = 1; </Text>
       <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
       <Value>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas])
+or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
 then null
 else
-([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
 end</Value>
       <Goal>1.5</Goal>
       <Status>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas])
+or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
 then null
 when
-([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
  &gt;= 1.5
 then
 1
 when
-((([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+((([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
  &lt; 1.5)
 and
-([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])&gt;=1)
+([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])&gt;=1)
 
 then 0
 else -1
 end</Status>
       <Trend>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas])
+or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
 then null
 When IsEmpty([Pedido - Fecha].[Ano -  Mes -  Fecha].PrevMember)
 
 then 1 
 when
-(([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+(([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
 -
 (
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
-[Measures].[Cantidad Cajas])
+[Measures].[Cantidad Cajas Factor Objetivo])
 
 /
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
@@ -1681,11 +1699,11 @@ when
 ))&lt;-1
 then -1
 else
-([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
 -
 (
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
-[Measures].[Cantidad Cajas])
+[Measures].[Cantidad Cajas Factor Objetivo])
 
 /
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,

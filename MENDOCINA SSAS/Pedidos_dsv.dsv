@@ -2046,7 +2046,7 @@
             <Name>Pedidos</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="48" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="5082" scrolltop="11432" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="21299" y="15981" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="48" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="6064" scrolltop="3575" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="21246" y="15901" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -2160,7 +2160,7 @@
                     <point x="14150" y="15838" />
                   </connector>
                 </ddscontrol>
-                <ddscontrol controlprogid="MSDDS.Polyline" left="-700" top="9675" logicalid="31" controlid="8" masterid="0" hint1="0" hint2="0" width="18381" height="1141" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <ddscontrol controlprogid="MSDDS.Polyline" left="7711" top="7429" logicalid="31" controlid="8" masterid="0" hint1="0" hint2="0" width="10569" height="3387" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
                       <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -2173,11 +2173,12 @@
                       <property name="VisibleAP" value="0" vartype="3" />
                     </ddsxmlobj>
                   </layoutobject>
-                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="6" sourceattachpoint="14" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="6" sourceattachpoint="14" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
                     <point x="8411" y="10416" />
-                    <point x="-400" y="10416" />
-                    <point x="-400" y="9975" />
-                    <point x="17381" y="9975" />
+                    <point x="8011" y="10416" />
+                    <point x="8011" y="7729" />
+                    <point x="17980" y="7729" />
+                    <point x="17980" y="8575" />
                   </connector>
                 </ddscontrol>
                 <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_Vendedor (dbo.Dim_Vendedor)" left="17775" top="13945" logicalid="32" controlid="9" masterid="0" hint1="0" hint2="0" width="3969" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
@@ -2436,8 +2437,8 @@
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>5082</DiagramViewPortLeft>
-            <DiagramViewPortTop>11432</DiagramViewPortTop>
+            <DiagramViewPortLeft>6064</DiagramViewPortLeft>
+            <DiagramViewPortTop>3575</DiagramViewPortTop>
             <DiagramBoundingLeft>8411</DiagramBoundingLeft>
             <DiagramBoundingTop>8575</DiagramBoundingTop>
             <DiagramZoom>100</DiagramZoom>
@@ -3061,6 +3062,7 @@
                   <xs:element name="cantidadCajas" msprop:design-time-name="16965df4-5f99-49d7-adcb-c1e3415d9094" msprop:DbColumnName="cantidadCajas" type="xs:decimal" minOccurs="0" />
                   <xs:element name="DescuentoBs" msdata:ReadOnly="true" msprop:design-time-name="580ff5b8-b292-4393-8619-9224866285ea" msprop:DbColumnName="DescuentoBs" msprop:ComputedColumnExpression="cantidad * descuento" msprop:Description="descuento total" msprop:IsLogical="True" type="xs:decimal" minOccurs="0" />
                   <xs:element name="MontoTotal" msdata:ReadOnly="true" msprop:design-time-name="6f12c603-b82e-417d-85d4-cfa69fad6067" msprop:DbColumnName="MontoTotal" msprop:ComputedColumnExpression="cantidad*(precio - descuento)" msprop:Description="Monto Bs con el descuento" msprop:IsLogical="True" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="cantidadCajasFactorObjetivo" msprop:design-time-name="7cb88802-917b-4f4d-b0ee-4232a698bf8e" msprop:DbColumnName="cantidadCajasFactorObjetivo" type="xs:decimal" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>

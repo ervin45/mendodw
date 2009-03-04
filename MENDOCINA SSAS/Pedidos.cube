@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-3536" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18891" y="14579" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="66" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-3536" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="17145" y="17754" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -802,7 +802,7 @@
         <Attribute dwd:design-time-name="8534565e-5e5b-4660-b980-65578e27943c">
           <AttributeID>Distribucion</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="647f2b76-1ab9-4c50-ba3f-cfc0826a8236">
+        <Attribute dwd:design-time-name="3c8eda98-2b46-4b80-92f1-c04307c61ea0">
           <AttributeID>Descuento</AttributeID>
         </Attribute>
       </Attributes>
@@ -1014,18 +1014,6 @@
             </Source>
           </Source>
           <FormatString>#,#</FormatString>
-        </Measure>
-        <Measure dwd:design-time-name="68bf6e78-05a4-4832-88ee-64eb9c47b49c">
-          <ID>Cantidad Cajas Factor Objetivo</ID>
-          <Name>Cantidad Cajas Factor Objetivo</Name>
-          <Source dwd:design-time-name="0148d026-fbba-4f6e-a320-c66b51daf464">
-            <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="297ac080-6743-42eb-bead-bd0548b876ce">
-              <TableID>dbo_Fact_Pedidos</TableID>
-              <ColumnID>cantidadCajasFactorObjetivo</ColumnID>
-            </Source>
-          </Source>
-          <FormatString>#,#.0</FormatString>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
@@ -1561,41 +1549,103 @@ Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cu
 Sólo debe editar este comando si especifica manualmente cómo se agrega el cubo.
 */
 CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Articulos]
+ AS Case
+// Test to avoid division by zero.
+When IsEmpty
+     ( 
+        [Measures].[Cantidad Articulos]
+     ) 
+Then Null
+
+Else  
+       [Measures].[Cantidad Articulos]
+     /
+     ( 
+	   Root		
+       ( 
+          [Articulo - Sabor]
+        ), 
+       Root		
+       ( 
+         [Cliente]
+        ), 
+       Root		
+       ( 
+         [Cliente - Expendio - Caracteristica]
+        ), 
+       Root		
+       ( 
+         [Cliente - Fecha Actualizacion]
+        ), 
+       Root		
+       ( 
+           [Cliente - Fecha Registro]
+        ), 
+        Root		
+       ( 
+           [Cliente - Ubicacion]
+        ), 
+        Root		
+       ( 
+        [Distrito - Ruta - Sector]
+        ), 
+        Root		
+       ( 
+         [Pedido - Codigo]
+        ), 
+
+
+        Root		
+       ( 
+        [Pedido - Fecha Vencimiento]
+        ), 
+        Root		
+       ( 
+        [Vendedor]
+        ), 
+        [Measures].[Cantidad Articulos]
+     )
+
+End, 
+FORMAT_STRING = Percent, 
+NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
+VISIBLE = 1  ;  
 CREATE SET CURRENTCUBE.[Pedidos con Descuento]
- AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0) ;           
+ AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0);            
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;           
+VISIBLE = 1;            
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
  AS distinctcount(filter([Vendedor].[Vendedor].[All].children,[cantidad articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;         
+VISIBLE = 1;          
 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;       
+VISIBLE = 1;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos con rechazos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Cantidad articulos rechazados]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;       
+VISIBLE = 1;        
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes con rechazos]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,
 [Cantidad articulos rechazados]&gt;0)
 ), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;    
+VISIBLE = 1;     
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Cajas Objetivo]
  AS [Cantidad de Articulos Objetivo]/24, 
 FORMAT_STRING = "#,#.0", 
 NON_EMPTY_BEHAVIOR = { [Cantidad de Articulos Objetivo] }, 
-VISIBLE = 1;  
+VISIBLE = 1;   
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Total Bs con descuento y rechazos]
  AS [Measures].[Total Bs con Descuento]-[Measures].[Total Bs rechazado], 
 FORMAT_STRING = "#,#", 
@@ -1655,43 +1705,43 @@ VISIBLE = 1; </Text>
       <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
       <Value>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
+or isEmpty([Measures].[Cantidad Cajas])
 then null
 else
-([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
 end</Value>
       <Goal>1.5</Goal>
       <Status>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
+or isEmpty([Measures].[Cantidad Cajas])
 then null
 when
-([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
  &gt;= 1.5
 then
 1
 when
-((([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
+((([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
  &lt; 1.5)
 and
-([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])&gt;=1)
+([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])&gt;=1)
 
 then 0
 else -1
 end</Status>
       <Trend>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
+or isEmpty([Measures].[Cantidad Cajas])
 then null
 When IsEmpty([Pedido - Fecha].[Ano -  Mes -  Fecha].PrevMember)
 
 then 1 
 when
-(([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
+(([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
 -
 (
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
-[Measures].[Cantidad Cajas Factor Objetivo])
+[Measures].[Cantidad Cajas])
 
 /
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
@@ -1699,11 +1749,11 @@ when
 ))&lt;-1
 then -1
 else
-([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
 -
 (
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
-[Measures].[Cantidad Cajas Factor Objetivo])
+[Measures].[Cantidad Cajas])
 
 /
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,

@@ -11995,39 +11995,39 @@
       </AggregationDesigns>
     </MeasureGroup>
     <MeasureGroup>
-      <ID>V Fact Clientes Hojas De Ruta</ID>
+      <ID>Fact Hoja De Ruta</ID>
       <Partitions>
-        <Partition dwd:design-time-name="11b3925b-edfc-4e88-bccd-3fbc004ddfa5">
-          <ID>V Fact Clientes Hojas De Ruta</ID>
-          <Name>V Fact Clientes Hojas De Ruta</Name>
+        <Partition dwd:design-time-name="75785b20-429b-4ad3-ad7e-3e0768d74982">
+          <ID>Fact Hoja De Ruta</ID>
+          <Name>Fact Hoja De Ruta</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <Annotations>
             <Annotation>
               <Name>AggregationPercent</Name>
-              <Value>84</Value>
+              <Value>60</Value>
             </Annotation>
           </Annotations>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f1471def-be38-4024-aff8-1cf2764e51bd">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="42ca839d-0239-4d51-aaa5-5123f7f161b3">
             <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
-            <TableID>V_Fact_ClientesHojasDeRuta</TableID>
+            <TableID>dbo_Fact_HojaDeRuta</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
-          <ProactiveCaching dwd:design-time-name="129be893-f73a-4483-a664-5f0297c139d4">
+          <ProactiveCaching dwd:design-time-name="697ae14c-8cad-41e7-a076-69dfed781250">
             <SilenceInterval>-PT1S</SilenceInterval>
             <Latency>-PT1S</Latency>
             <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
             <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
             <AggregationStorage>MolapOnly</AggregationStorage>
-            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="73282143-c3ee-4e59-a1e9-a93e1c9d2bbb">
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="e0ccb79b-75aa-4ed0-8ec1-a3267c7047ba">
               <NotificationTechnique>Server</NotificationTechnique>
             </Source>
           </ProactiveCaching>
-          <EstimatedRows>8734</EstimatedRows>
+          <EstimatedRows>729676</EstimatedRows>
           <AggregationDesignID>AggregationDesign</AggregationDesignID>
         </Partition>
       </Partitions>
@@ -12035,10 +12035,46 @@
         <AggregationDesign>
           <ID>AggregationDesign</ID>
           <Name>AggregationDesign</Name>
-          <CreatedTimestamp>2009-03-04T22:57:26Z</CreatedTimestamp>
-          <LastSchemaUpdate>2009-03-04T22:57:26Z</LastSchemaUpdate>
-          <EstimatedRows>8734</EstimatedRows>
+          <CreatedTimestamp>2009-03-05T02:23:08Z</CreatedTimestamp>
+          <LastSchemaUpdate>2009-03-05T02:23:08Z</LastSchemaUpdate>
+          <EstimatedRows>729676</EstimatedRows>
           <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Dim Tipo Cliente</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Tipo Cliente Desc</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Año</AttributeID>
+                  <EstimatedCount>26</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mes</AttributeID>
+                  <EstimatedCount>302</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha</AttributeID>
+                  <EstimatedCount>9132</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Día del mes</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>FechaId</AttributeID>
+                  <EstimatedCount>9133</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
             <Dimension>
               <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
               <Attributes>
@@ -12068,38 +12104,51 @@
               </Attributes>
             </Dimension>
             <Dimension>
-              <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+              <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
               <Attributes>
                 <Attribute>
-                  <AttributeID>Dim Tipo Cliente</AttributeID>
-                  <EstimatedCount>3</EstimatedCount>
+                  <AttributeID>Dim Clientes</AttributeID>
+                  <EstimatedCount>31105</EstimatedCount>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>Tipo Cliente Desc</AttributeID>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension>
-              <CubeDimensionID>Fecha</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>Año</AttributeID>
-                  <EstimatedCount>26</EstimatedCount>
+                  <AttributeID>Id Cliente Mendo</AttributeID>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>Mes</AttributeID>
-                  <EstimatedCount>302</EstimatedCount>
+                  <AttributeID>Nombre Completo</AttributeID>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>Fecha</AttributeID>
-                  <EstimatedCount>9132</EstimatedCount>
+                  <AttributeID>Nombre Local</AttributeID>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>Día del mes</AttributeID>
+                  <AttributeID>Direccion</AttributeID>
                 </Attribute>
                 <Attribute>
-                  <AttributeID>FechaId</AttributeID>
-                  <EstimatedCount>9133</EstimatedCount>
+                  <AttributeID>Telefono</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Email</AttributeID>
+                  <EstimatedCount>6</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cedula</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Nit</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Empresa Sucursal Agenciafk</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Cliente Ubicacionfk</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fecha Registrofk</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Fechade Actualizacionfk</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Expendio Caracteristicafk</AttributeID>
                 </Attribute>
               </Attributes>
             </Dimension>
@@ -12110,14 +12159,6 @@
               <Name>Aggregation 0</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Sector Nombre</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                   <Attributes>
                     <Attribute>
@@ -12126,12 +12167,23 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Año</AttributeID>
+                      <AttributeID>Mes</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12140,14 +12192,6 @@
               <Name>Aggregation 1</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Sector Nombre</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                   <Attributes>
                     <Attribute>
@@ -12156,7 +12200,18 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12165,9 +12220,6 @@
               <Name>Aggregation 2</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                   <Attributes>
                     <Attribute>
@@ -12176,12 +12228,18 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Mes</AttributeID>
+                      <AttributeID>Dim Distrito Ruta Sector</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12190,6 +12248,22 @@
               <Name>Aggregation 3</Name>
               <Dimensions>
                 <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                   <Attributes>
                     <Attribute>
@@ -12198,15 +12272,7 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Mes</AttributeID>
-                    </Attribute>
-                  </Attributes>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12215,9 +12281,6 @@
               <Name>Aggregation 4</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                   <Attributes>
                     <Attribute>
@@ -12226,7 +12289,23 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12235,9 +12314,6 @@
               <Name>Aggregation 5</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                   <Attributes>
                     <Attribute>
@@ -12246,12 +12322,23 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Año</AttributeID>
+                      <AttributeID>FechaId</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12260,14 +12347,6 @@
               <Name>Aggregation 6</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Distrito Ruta Sector</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                   <Attributes>
                     <Attribute>
@@ -12276,7 +12355,18 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Clientes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12285,18 +12375,26 @@
               <Name>Aggregation 7</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Sector Nombre</AttributeID>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12305,23 +12403,21 @@
               <Name>Aggregation 8</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Sector Nombre</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Año</AttributeID>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12330,13 +12426,26 @@
               <Name>Aggregation 9</Name>
               <Dimensions>
                 <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12345,18 +12454,26 @@
               <Name>Aggregation a</Name>
               <Dimensions>
                 <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>FechaId</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Año</AttributeID>
-                    </Attribute>
-                  </Attributes>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12365,18 +12482,26 @@
               <Name>Aggregation b</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
                   <Attributes>
                     <Attribute>
                       <AttributeID>Mes</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12384,6 +12509,17 @@
               <ID>Aggregation c</ID>
               <Name>Aggregation c</Name>
               <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                   <Attributes>
@@ -12393,10 +12529,7 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12405,23 +12538,21 @@
               <Name>Aggregation d</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Distrito Nombre</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Año</AttributeID>
+                      <AttributeID>Sector Nombre</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12430,18 +12561,26 @@
               <Name>Aggregation e</Name>
               <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Distrito Nombre</AttributeID>
+                      <AttributeID>Año</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sector Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12450,23 +12589,26 @@
               <Name>Aggregation f</Name>
               <Dimensions>
                 <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>FechaId</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Distrito Nombre</AttributeID>
+                      <AttributeID>Sector Nombre</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>Dim Tipo Cliente</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -12475,6 +12617,178 @@
               <Name>Aggregation 10</Name>
               <Dimensions>
                 <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 11</ID>
+              <Name>Aggregation 11</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 12</ID>
+              <Name>Aggregation 12</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 13</ID>
+              <Name>Aggregation 13</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 14</ID>
+              <Name>Aggregation 14</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>FechaId</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 15</ID>
+              <Name>Aggregation 15</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Distrito Ruta Sector</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 16</ID>
+              <Name>Aggregation 16</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Clientes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 17</ID>
+              <Name>Aggregation 17</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Mes</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                   <Attributes>
                     <Attribute>
@@ -12482,6 +12796,15 @@
                     </Attribute>
                   </Attributes>
                 </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 18</ID>
+              <Name>Aggregation 18</Name>
+              <Dimensions>
                 <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                   <Attributes>
@@ -12491,19 +12814,13 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Año</AttributeID>
+                      <AttributeID>Mes</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 11</ID>
-              <Name>Aggregation 11</Name>
-              <Dimensions>
                 <Dimension>
                   <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
                   <Attributes>
@@ -12513,15 +12830,180 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 19</ID>
+              <Name>Aggregation 19</Name>
+              <Dimensions>
+                <Dimension>
                   <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>Fecha</CubeDimensionID>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>Mes</AttributeID>
+                      <AttributeID>FechaId</AttributeID>
                     </Attribute>
                   </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1a</ID>
+              <Name>Aggregation 1a</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>FechaId</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1b</ID>
+              <Name>Aggregation 1b</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1c</ID>
+              <Name>Aggregation 1c</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1d</ID>
+              <Name>Aggregation 1d</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Dim Tipo Cliente</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1e</ID>
+              <Name>Aggregation 1e</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Dim Tipo Cliente</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Fecha Hoja de Ruta</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Año</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Distrito Ruta Sector</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Distrito Nombre</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Clientes 1</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>

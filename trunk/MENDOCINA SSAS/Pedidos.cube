@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="82" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="7438" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18944" y="11986" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="82" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-1916" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18944" y="11986" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -689,7 +689,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>7438</Value>
+      <Value>-1916</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -1239,6 +1239,17 @@
             </Source>
           </Source>
           <FormatString>#,#</FormatString>
+        </Measure>
+        <Measure dwd:design-time-name="8de360e9-9add-4475-ae0f-fc8136c7bfe7">
+          <ID>Cantidad Cajas Factor Objetivo</ID>
+          <Name>Cantidad Cajas Factor Objetivo</Name>
+          <Source dwd:design-time-name="32144c39-8767-400b-8e78-e99a15df3780">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0bb15804-be26-466e-a90b-c0bde03362fb">
+              <TableID>dbo_Fact_Pedidos</TableID>
+              <ColumnID>cantidadCajasFactorObjetivo</ColumnID>
+            </Source>
+          </Source>
         </Measure>
       </Measures>
       <StorageMode>Molap</StorageMode>
@@ -1877,10 +1888,9 @@ El comando CALCULATE controla la agregación de celdas hoja en el cubo.
 Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cubo.
 Sólo debe editar este comando si especifica manualmente cómo se agrega el cubo.
 */
-CALCULATE;    
+CALCULATE;       
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Articulos]
  AS Case
-// Test to avoid division by zero.
 When IsEmpty
      ( 
         [Measures].[Cantidad Articulos]
@@ -1939,105 +1949,242 @@ Else
 End, 
 FORMAT_STRING = Percent, 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;     
+VISIBLE = 1;        
 CREATE SET CURRENTCUBE.[Pedidos con Descuento]
- AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0);               
+ AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0);                  
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;               
+VISIBLE = 1;                  
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
  AS distinctcount(filter([Vendedor].[Vendedor].[All].children,[cantidad articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;             
+VISIBLE = 1;                
 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;           
+VISIBLE = 1;              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos con rechazos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Cantidad articulos rechazados]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;           
+VISIBLE = 1;              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes con rechazos]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,
 [Cantidad articulos rechazados]&gt;0)
 ), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;        
+VISIBLE = 1;           
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Cajas Objetivo]
  AS [Cantidad de Articulos Objetivo]/24, 
 FORMAT_STRING = "#,#.0", 
 NON_EMPTY_BEHAVIOR = { [Cantidad de Articulos Objetivo] }, 
-VISIBLE = 1;      
+VISIBLE = 1;         
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Total Bs con descuento y rechazos]
  AS [Measures].[Total Bs con Descuento]-[Measures].[Total Bs rechazado], 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Total Bs con Descuento], [Total Bs rechazado] }, 
-VISIBLE = 1;      
-CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes en Hoja de Ruta]
- AS (closingperiod([Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha].[Fecha],[Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha].currentmember),[_Cantidad de Clientes Hoja de ruta]), 
+VISIBLE = 1;         
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes  Activos en Hoja de Ruta]
+ AS (
+closingperiod([Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha].[Fecha],LINKMEMBER([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember, [Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha])),
+[Hoja de Ruta - Tipo de Cliente].[Tipo Cliente].&amp;[Activo],
+[_Cantidad de Clientes Hoja de ruta]), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [_Cantidad de clientes hoja de ruta] }, 
-VISIBLE = 0  ; </Text>
+VISIBLE = 1  ;   
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Cajas]
+ AS Case
+When IsEmpty
+     ( 
+        [Measures].[Cantidad Cajas]
+     ) 
+Then Null
+
+Else  
+       [Measures].[Cantidad Cajas]
+     /
+     ( 
+	   Root		
+       ( 
+          [Articulo - Sabor]
+        ), 
+       Root		
+       ( 
+         [Cliente]
+        ), 
+       Root		
+       ( 
+         [Cliente - Expendio - Caracteristica]
+        ), 
+       Root		
+       ( 
+         [Cliente - Fecha Actualizacion]
+        ), 
+       Root		
+       ( 
+           [Cliente - Fecha Registro]
+        ), 
+        Root		
+       ( 
+           [Cliente - Ubicacion]
+        ), 
+        Root		
+       ( 
+        [Distrito - Ruta - Sector]
+        ), 
+        Root		
+       ( 
+         [Pedido - Codigo]
+        ), 
+
+
+        Root		
+       ( 
+        [Pedido - Fecha Vencimiento]
+        ), 
+        Root		
+       ( 
+        [Vendedor]
+        ), 
+        [Measures].[Cantidad Cajas]
+     )
+
+End, 
+FORMAT_STRING = Percent, 
+NON_EMPTY_BEHAVIOR = { [Cantidad Cajas] }, 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Cajas Factor Objetivo]
+ AS Case
+When IsEmpty
+     ( 
+        [Measures].[Cantidad Cajas Factor Objetivo]
+     ) 
+Then Null
+
+Else  
+       [Measures].[Cantidad Cajas Factor Objetivo]
+     /
+     ( 
+	   Root		
+       ( 
+          [Articulo - Sabor]
+        ), 
+       Root		
+       ( 
+         [Cliente]
+        ), 
+       Root		
+       ( 
+         [Cliente - Expendio - Caracteristica]
+        ), 
+       Root		
+       ( 
+         [Cliente - Fecha Actualizacion]
+        ), 
+       Root		
+       ( 
+           [Cliente - Fecha Registro]
+        ), 
+        Root		
+       ( 
+           [Cliente - Ubicacion]
+        ), 
+        Root		
+       ( 
+        [Distrito - Ruta - Sector]
+        ), 
+        Root		
+       ( 
+         [Pedido - Codigo]
+        ), 
+
+
+        Root		
+       ( 
+        [Pedido - Fecha Vencimiento]
+        ), 
+        Root		
+       ( 
+        [Vendedor]
+        ), 
+        [Measures].[Cantidad Cajas Factor Objetivo]
+     )
+
+End, 
+FORMAT_STRING = Percent, 
+NON_EMPTY_BEHAVIOR = { [Cantidad Cajas] }, 
+VISIBLE = 1; </Text>
         </Command>
       </Commands>
       <CalculationProperties>
-        <CalculationProperty dwd:design-time-name="c4b4e0ba-3295-4f3c-932b-c24f78d56638">
+        <CalculationProperty dwd:design-time-name="d800a3db-5084-4ddb-9c9f-779d452b3011">
           <CalculationReference>[MEASURES].[Cantidad de Clientes]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="c69b40ea-6d44-435b-900b-1c12168af901">
+        <CalculationProperty dwd:design-time-name="66888ab0-b5fa-46f9-bfe2-5282a17be455">
           <CalculationReference>[MEASURES].[Cantidad de Vendedores]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="bf53d37d-c241-4fd3-b732-1a4409d44b97">
+        <CalculationProperty dwd:design-time-name="6a228838-4f83-483f-96dd-7eefca8a1eb0">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="91e10018-5c42-49c9-bca1-0f3b7a353d03">
+        <CalculationProperty dwd:design-time-name="731eb001-3e90-48e7-aed6-7666f6a8ed07">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="14a99119-50ae-4ff9-b8c9-4c61b77286cb">
+        <CalculationProperty dwd:design-time-name="ba1a9d45-eeb5-4c38-8db0-009b18e40f3d">
           <CalculationReference>[MEASURES].[Cantidad de Clientes con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="05bc8d5f-c77d-4cb6-a273-ab96f0479227">
+        <CalculationProperty dwd:design-time-name="17fc3882-e18d-4d11-af48-c396826ab7d6">
           <CalculationReference>[MEASURES].[Cantidad de Cajas Objetivo]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="964a6b8a-653e-4307-8bef-248b411c9338">
+        <CalculationProperty dwd:design-time-name="76964563-2004-459e-8395-92bb187935f0">
           <CalculationReference>[MEASURES].[Total Bs con descuento y rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="d232895c-7021-4d2d-b8e4-9a6faf4f2deb">
+        <CalculationProperty dwd:design-time-name="923f2014-0bda-4812-90a8-ac01f612bbe6">
           <CalculationReference>Pedidos con Descuento</CalculationReference>
           <CalculationType>Set</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="9f79c6ab-6e69-4500-9299-d1950d53bdec">
+        <CalculationProperty dwd:design-time-name="d4f67177-a474-443b-b3c5-90f9a00e9b0c">
           <CalculationReference>[MEASURES].[Participacion Cantidad Articulos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
           <DisplayFolder>Participaciones</DisplayFolder>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="242f17aa-68c1-4a99-9779-8ee1b38c2489">
+        <CalculationProperty dwd:design-time-name="c327c8e0-2e3f-48f4-b3e3-bcebb47019c1">
           <CalculationReference>[MEASURES].[Cantidad de Clientes en Hoja de Ruta]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Hoja De Ruta</AssociatedMeasureGroupID>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="9545870e-b642-4ec9-8d28-5bd549b4a6b4">
+          <CalculationReference>[MEASURES].[Participacion Cantidad Cajas]</CalculationReference>
+          <CalculationType>Member</CalculationType>
+          <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
+          <DisplayFolder>Participaciones</DisplayFolder>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="9f2baa98-ab10-40d0-b54a-0ace67cd0f23">
+          <CalculationReference>[MEASURES].[Participacion Cantidad Cajas Factor Objetivo]</CalculationReference>
+          <CalculationType>Member</CalculationType>
+          <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
+          <DisplayFolder>Participaciones</DisplayFolder>
         </CalculationProperty>
       </CalculationProperties>
     </MdxScript>
@@ -2050,43 +2197,43 @@ VISIBLE = 0  ; </Text>
       <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
       <Value>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas])
+or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
 then null
 else
-([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
 end</Value>
-      <Goal>1.5</Goal>
+      <Goal></Goal>
       <Status>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas])
+or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
 then null
 when
-([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
  &gt;= 1.5
 then
 1
 when
-((([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+((([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
  &lt; 1.5)
 and
-([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])&gt;=1)
+([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])&gt;=1)
 
 then 0
 else -1
 end</Status>
       <Trend>Case
 when isEmpty([Measures].[Cantidad de Cajas Objetivo])
-or isEmpty([Measures].[Cantidad Cajas])
+or isEmpty([Measures].[Cantidad Cajas Factor Objetivo])
 then null
 When IsEmpty([Pedido - Fecha].[Ano -  Mes -  Fecha].PrevMember)
 
 then 1 
 when
-(([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+(([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
 -
 (
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
-[Measures].[Cantidad Cajas])
+[Measures].[Cantidad Cajas Factor Objetivo])
 
 /
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
@@ -2094,11 +2241,11 @@ when
 ))&lt;-1
 then -1
 else
-([Measures].[Cantidad Cajas]/[Measures].[Cantidad de Cajas Objetivo])
+([Measures].[Cantidad Cajas Factor Objetivo]/[Measures].[Cantidad de Cajas Objetivo])
 -
 (
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
-[Measures].[Cantidad Cajas])
+[Measures].[Cantidad Cajas Factor Objetivo])
 
 /
 ([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember.PrevMember,
@@ -2112,21 +2259,60 @@ end
     </Kpi>
     <Kpi dwd:design-time-name="6a33cb63-2bc9-49d7-b883-087ad215e950">
       <ID>KPI 1</ID>
-      <Name>Preventa a Clientes Activos</Name>
-      <Value>[Measures].[Cantidad de Clientes]</Value>
-      <Goal>(
-LINKMEMBER( [Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember, [Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha])
-,
-[Hoja de Ruta - Tipo de Cliente].[Tipo Cliente].&amp;[Activo],
-[Measures].[Cantidad de Clientes en Hoja de Ruta])</Goal>
-      <Status>[Measures].[Cantidad de Clientes]/
+      <Name>Ratio de Clientes Activos con Preventa</Name>
+      <Description>es la cantidad total de clientes que hicieron pedidos entre la cantidad total de clientes activos para un distrito ruta o sector, el estado es mayor al 90% en verde y debajo del 50% en rojo</Description>
+      <Value>Case
+when 
+[Measures].[Cantidad de Clientes]=0 or
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta]=0
+then
+null
+else
+[Measures].[Cantidad de Clientes]/
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta]
+end</Value>
+      <Goal></Goal>
+      <Status>Case
+when 
+[Measures].[Cantidad de Clientes]=0 or
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta]=0
+then
+null
+when
+[Measures].[Cantidad de Clientes]/
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta]&gt;=1
+then 1
+when
+[Measures].[Cantidad de Clientes]/
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta] &gt; 0.5 then 0
+else
+-1
+end</Status>
+      <Trend>Case
+when 
+[Measures].[Cantidad de Clientes]=0 or
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta]=0
+then
+null
+when
+([Pedido - Fecha].[Ano -  Mes -  Fecha].PREVMEMBER,
+[Measures].[Cantidad de Clientes])=0 or
 (
-LINKMEMBER( [Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember, [Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha])
+[Pedido - Fecha].[Ano -  Mes -  Fecha].PREVMEMBER
 ,
-[Hoja de Ruta - Tipo de Cliente].[Tipo Cliente].&amp;[Activo],
-[Measures].[Cantidad de Clientes en Hoja de Ruta])
-
-</Status>
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta])=0
+then 1
+else
+[Measures].[Cantidad de Clientes]/
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta]
+- 
+([Pedido - Fecha].[Ano -  Mes -  Fecha].PREVMEMBER,
+[Measures].[Cantidad de Clientes])/
+(
+[Pedido - Fecha].[Ano -  Mes -  Fecha].prevmember
+,
+[Measures].[Cantidad de Clientes Activos en Hoja de Ruta])
+end</Trend>
       <TrendGraphic>Standard Arrow</TrendGraphic>
       <StatusGraphic>Traffic Light</StatusGraphic>
     </Kpi>

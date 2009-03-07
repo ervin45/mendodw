@@ -1990,7 +1990,7 @@ CREATE MEMBER CURRENTCUBE.[MEASURES].[Total Bs con descuento y rechazos]
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Total Bs con Descuento], [Total Bs rechazado] }, 
 VISIBLE = 1;         
-CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes  Activos en Hoja de Ruta]
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes Activos en Hoja de Ruta]
  AS (
 closingperiod([Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha].[Fecha],LINKMEMBER([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember, [Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha])),
 [Hoja de Ruta - Tipo de Cliente].[Tipo Cliente].&amp;[Activo],
@@ -2123,68 +2123,73 @@ VISIBLE = 1; </Text>
         </Command>
       </Commands>
       <CalculationProperties>
-        <CalculationProperty dwd:design-time-name="d800a3db-5084-4ddb-9c9f-779d452b3011">
+        <CalculationProperty dwd:design-time-name="a6dda190-140d-4b7d-a66e-cc9c7b523f2f">
           <CalculationReference>[MEASURES].[Cantidad de Clientes]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="66888ab0-b5fa-46f9-bfe2-5282a17be455">
+        <CalculationProperty dwd:design-time-name="16ff43b3-17ef-47c8-bbe1-482f71565af9">
           <CalculationReference>[MEASURES].[Cantidad de Vendedores]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="6a228838-4f83-483f-96dd-7eefca8a1eb0">
+        <CalculationProperty dwd:design-time-name="5c3f56d6-a3ce-4eb6-8740-89e2126fadaa">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="731eb001-3e90-48e7-aed6-7666f6a8ed07">
+        <CalculationProperty dwd:design-time-name="ac9aedf5-c830-491e-99a9-f6244bfc40b8">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="ba1a9d45-eeb5-4c38-8db0-009b18e40f3d">
+        <CalculationProperty dwd:design-time-name="b56b4838-6a42-48fd-9378-ca3713d8e190">
           <CalculationReference>[MEASURES].[Cantidad de Clientes con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="17fc3882-e18d-4d11-af48-c396826ab7d6">
+        <CalculationProperty dwd:design-time-name="65539563-17b8-4c20-a052-d299cdb818ba">
           <CalculationReference>[MEASURES].[Cantidad de Cajas Objetivo]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="76964563-2004-459e-8395-92bb187935f0">
+        <CalculationProperty dwd:design-time-name="e39c953b-2f44-44ac-9b07-969a7cf0c077">
           <CalculationReference>[MEASURES].[Total Bs con descuento y rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="923f2014-0bda-4812-90a8-ac01f612bbe6">
+        <CalculationProperty dwd:design-time-name="f4af6efa-b372-4fc6-90d3-a85329b3537d">
           <CalculationReference>Pedidos con Descuento</CalculationReference>
           <CalculationType>Set</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="d4f67177-a474-443b-b3c5-90f9a00e9b0c">
+        <CalculationProperty dwd:design-time-name="85b88d3c-55b9-4829-89fa-99ffde2f7bba">
           <CalculationReference>[MEASURES].[Participacion Cantidad Articulos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
           <DisplayFolder>Participaciones</DisplayFolder>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="c327c8e0-2e3f-48f4-b3e3-bcebb47019c1">
+        <CalculationProperty dwd:design-time-name="af09ce0c-9568-421e-b532-66869e7a8597">
           <CalculationReference>[MEASURES].[Cantidad de Clientes en Hoja de Ruta]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Hoja De Ruta</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="9545870e-b642-4ec9-8d28-5bd549b4a6b4">
+        <CalculationProperty dwd:design-time-name="95421ecd-50c1-48df-ac92-0b5ed03c893a">
           <CalculationReference>[MEASURES].[Participacion Cantidad Cajas]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
           <DisplayFolder>Participaciones</DisplayFolder>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="9f2baa98-ab10-40d0-b54a-0ace67cd0f23">
+        <CalculationProperty dwd:design-time-name="ec20a328-b89d-40b5-8d36-9a4af39ad9e9">
           <CalculationReference>[MEASURES].[Participacion Cantidad Cajas Factor Objetivo]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
           <DisplayFolder>Participaciones</DisplayFolder>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="c5b3865a-9379-4567-b7e4-374bc84be3fd">
+          <CalculationReference>[MEASURES].[Cantidad de Clientes Activos en Hoja de Ruta]</CalculationReference>
+          <CalculationType>Member</CalculationType>
+          <AssociatedMeasureGroupID>Fact Hoja De Ruta</AssociatedMeasureGroupID>
         </CalculationProperty>
       </CalculationProperties>
     </MdxScript>
@@ -2263,7 +2268,6 @@ end
       <Description>es la cantidad total de clientes que hicieron pedidos entre la cantidad total de clientes activos para un distrito ruta o sector, el estado es mayor al 90% en verde y debajo del 50% en rojo</Description>
       <Value>Case
 when 
-[Measures].[Cantidad de Clientes]=0 or
 [Measures].[Cantidad de Clientes Activos en Hoja de Ruta]=0
 then
 null
@@ -2317,19 +2321,4 @@ end</Trend>
       <StatusGraphic>Traffic Light</StatusGraphic>
     </Kpi>
   </Kpis>
-  <Actions>
-    <Action xsi:type="StandardAction" dwd:design-time-name="9059e126-fd6d-4996-ba7d-600e9b5cbdd9">
-      <ID>Acción</ID>
-      <Name>Fechas Validas</Name>
-      <TargetType>Cells</TargetType>
-      <Target></Target>
-      <Type>Statement</Type>
-      <Expression>CREATE SUBCUBE [Pedidos] AS
-(
-SELECT 
-   filter([Fecha].[Ano -  Mes -  Fecha].allmembers, not isempty([Measures].[Cantidad Articulos]))  ON 0
-   FROM [Pedidos]
-)</Expression>
-    </Action>
-  </Actions>
 </Cube>

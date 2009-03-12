@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="82" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-1916" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18944" y="14658" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="82" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1063" scrolltop="-1916" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="84" x="18944" y="11986" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -2008,37 +2008,54 @@ Else
        [Measures].[Cantidad Cajas]
      /
      ( 
+       
+        iif([Articulo - Sabor].[Capacidad].currentmember.parent is null,
+        [Articulo - Sabor].[Capacidad].currentmember,
+        [Articulo - Sabor].[Capacidad].currentmember.parent) 
+        ,
+        iif([Articulo - Sabor].[Sabor].currentmember.parent is null,
+        [Articulo - Sabor].[Sabor].currentmember,
+        [Articulo - Sabor].[Sabor].currentmember.parent),
+        iif([Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent is null,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent),
+         
        Root		
        ( 
          [Cliente]
         ), 
-       
-       Root		
-       ( 
-         [Cliente - Fecha Actualizacion]
-        ), 
-       Root		
-       ( 
-           [Cliente - Fecha Registro]
-        ), 
+        iif([Articulo - Sabor].[Linea - Presentacion].currentmember.parent is null,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember.parent),  
+        iif([Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent),         
+        iif([Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent),
+        iif([Pedido - Estado].[Contado o Credito].currentmember.parent is null,
+        [Pedido - Estado].[Contado o Credito].currentmember,
+        [Pedido - Estado].[Contado o Credito].currentmember.parent),
+        iif([Pedido - Estado].[Estado].currentmember.parent is null,
+        [Pedido - Estado].[Estado].currentmember,
+        [Pedido - Estado].[Estado].currentmember.parent),
+        iif([Pedido - Estado].[Descuento].currentmember.parent is null,
+        [Pedido - Estado].[Descuento].currentmember,
+        [Pedido - Estado].[Descuento].currentmember.parent),
         Root		
        ( 
            [Cliente - Ubicacion]
         ), 
-       
         Root		
        ( 
          [Pedido - Codigo]
         ), 
        iif([Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent is null,
-[Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember,
         [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent),
-
-    
-        Root		
-       ( 
-        [Pedido - Fecha Vencimiento]
-        ), 
+       iif([Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent),
         Root		
        ( 
         [Vendedor]

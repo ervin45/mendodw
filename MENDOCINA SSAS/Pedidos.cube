@@ -1888,7 +1888,7 @@ El comando CALCULATE controla la agregación de celdas hoja en el cubo.
 Si se elimina o modifica el comando CALCULATE, se ven afectados los datos del cubo.
 Sólo debe editar este comando si especifica manualmente cómo se agrega el cubo.
 */
-CALCULATE;         
+CALCULATE;          
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Articulos]
  AS Case
 When IsEmpty
@@ -1900,43 +1900,55 @@ Then Null
 Else  
        [Measures].[Cantidad Articulos]
      /
-     ( 
-	   Root		
-       ( 
-          [Articulo - Sabor]
-        ), 
+    ( 
+       
+        iif([Articulo - Sabor].[Capacidad].currentmember.parent is null,
+        [Articulo - Sabor].[Capacidad].currentmember,
+        [Articulo - Sabor].[Capacidad].currentmember.parent) 
+        ,
+        iif([Articulo - Sabor].[Sabor].currentmember.parent is null,
+        [Articulo - Sabor].[Sabor].currentmember,
+        [Articulo - Sabor].[Sabor].currentmember.parent),
+        iif([Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent is null,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent),
+         
        Root		
        ( 
          [Cliente]
         ), 
-       Root		
-       ( 
-         [Cliente - Expendio - Caracteristica]
-        ), 
-       Root		
-       ( 
-         [Cliente - Fecha Actualizacion]
-        ), 
-       Root		
-       ( 
-           [Cliente - Fecha Registro]
-        ), 
+        iif([Articulo - Sabor].[Linea - Presentacion].currentmember.parent is null,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember.parent),  
+        iif([Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent),         
+        iif([Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent),
+        iif([Pedido - Estado].[Contado o Credito].currentmember.parent is null,
+        [Pedido - Estado].[Contado o Credito].currentmember,
+        [Pedido - Estado].[Contado o Credito].currentmember.parent),
+        iif([Pedido - Estado].[Estado].currentmember.parent is null,
+        [Pedido - Estado].[Estado].currentmember,
+        [Pedido - Estado].[Estado].currentmember.parent),
+        iif([Pedido - Estado].[Descuento].currentmember.parent is null,
+        [Pedido - Estado].[Descuento].currentmember,
+        [Pedido - Estado].[Descuento].currentmember.parent),
         Root		
        ( 
            [Cliente - Ubicacion]
         ), 
-               ancestor([Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember,[Distrito - Ruta - Sector].[Distrito - Ruta - Sector].[Distrito]),
-
         Root		
        ( 
          [Pedido - Codigo]
         ), 
-
-
-        Root		
-       ( 
-        [Pedido - Fecha Vencimiento]
-        ), 
+       iif([Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent is null,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent),
+       iif([Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent),
         Root		
        ( 
         [Vendedor]
@@ -1945,49 +1957,49 @@ Else
      )
 
 End, 
-FORMAT_STRING = Percent, 
+FORMAT_STRING = "Percent", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1  ;          
+VISIBLE = 1;           
 CREATE SET CURRENTCUBE.[Pedidos con Descuento]
- AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0);                    
+ AS filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Descuento Bs]&gt;0);                     
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;                    
+VISIBLE = 1;                     
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Vendedores]
  AS distinctcount(filter([Vendedor].[Vendedor].[All].children,[cantidad articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;                  
+VISIBLE = 1;                   
 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Measures].[Cantidad Articulos]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos] }, 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Pedidos con rechazos]
  AS distinctcount(filter([Pedido - Codigo].[Codigo Pedido].[All].children,[Cantidad articulos rechazados]&gt;0)), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;                
+VISIBLE = 1;                 
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes con rechazos]
  AS distinctcount(filter([Cliente].[Codigo Cliente].[all].children,
 [Cantidad articulos rechazados]&gt;0)
 ), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos rechazados] }, 
-VISIBLE = 1;             
+VISIBLE = 1;              
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Cajas Objetivo]
  AS [Cantidad de Articulos Objetivo]/24, 
 FORMAT_STRING = "#,#.0", 
 NON_EMPTY_BEHAVIOR = { [Cantidad de Articulos Objetivo] }, 
-VISIBLE = 1;           
+VISIBLE = 1;            
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Total Bs con descuento y rechazos]
  AS [Measures].[Total Bs con Descuento]-[Measures].[Total Bs rechazado], 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Total Bs con Descuento], [Total Bs rechazado] }, 
-VISIBLE = 1;           
+VISIBLE = 1;            
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Cantidad de Clientes Activos en Hoja de Ruta]
  AS (
 closingperiod([Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha].[Fecha],LINKMEMBER([Pedido - Fecha].[Ano -  Mes -  Fecha].currentmember, [Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha])),
@@ -1995,7 +2007,7 @@ closingperiod([Hoja de Ruta - Fecha].[Ano -  Mes -  Fecha].[Fecha],LINKMEMBER([P
 [_Cantidad de Clientes Hoja de ruta]), 
 FORMAT_STRING = "#,#", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Articulos], [_Cantidad de clientes hoja de ruta] }, 
-VISIBLE = 1;     
+VISIBLE = 1;      
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Cajas]
  AS Case
 When IsEmpty
@@ -2066,7 +2078,7 @@ Else
 End, 
 FORMAT_STRING = "Percent", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Cajas] }, 
-VISIBLE = 1  ;    
+VISIBLE = 1;     
 CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Cajas Factor Objetivo]
  AS Case
 When IsEmpty
@@ -2079,123 +2091,290 @@ Else
        [Measures].[Cantidad Cajas Factor Objetivo]
      /
      ( 
-	   Root		
-       ( 
-          [Articulo - Sabor]
-        ), 
+       
+        iif([Articulo - Sabor].[Capacidad].currentmember.parent is null,
+        [Articulo - Sabor].[Capacidad].currentmember,
+        [Articulo - Sabor].[Capacidad].currentmember.parent) 
+        ,
+        iif([Articulo - Sabor].[Sabor].currentmember.parent is null,
+        [Articulo - Sabor].[Sabor].currentmember,
+        [Articulo - Sabor].[Sabor].currentmember.parent),
+        iif([Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent is null,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent),
+         
        Root		
        ( 
          [Cliente]
         ), 
-       Root		
-       ( 
-         [Cliente - Expendio - Caracteristica]
-        ), 
-       Root		
-       ( 
-         [Cliente - Fecha Actualizacion]
-        ), 
-       Root		
-       ( 
-           [Cliente - Fecha Registro]
-        ), 
+        iif([Articulo - Sabor].[Linea - Presentacion].currentmember.parent is null,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember.parent),  
+        iif([Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent),         
+        iif([Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent),
+        iif([Pedido - Estado].[Contado o Credito].currentmember.parent is null,
+        [Pedido - Estado].[Contado o Credito].currentmember,
+        [Pedido - Estado].[Contado o Credito].currentmember.parent),
+        iif([Pedido - Estado].[Estado].currentmember.parent is null,
+        [Pedido - Estado].[Estado].currentmember,
+        [Pedido - Estado].[Estado].currentmember.parent),
+        iif([Pedido - Estado].[Descuento].currentmember.parent is null,
+        [Pedido - Estado].[Descuento].currentmember,
+        [Pedido - Estado].[Descuento].currentmember.parent),
         Root		
        ( 
            [Cliente - Ubicacion]
         ), 
-              ancestor([Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember,[Distrito - Ruta - Sector].[Distrito - Ruta - Sector].[Distrito]),
-
         Root		
        ( 
          [Pedido - Codigo]
         ), 
-
-
-        Root		
-       ( 
-        [Pedido - Fecha Vencimiento]
-        ), 
+       iif([Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent is null,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent),
+       iif([Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent),
         Root		
        ( 
         [Vendedor]
-        ), 
+        ),
         [Measures].[Cantidad Cajas Factor Objetivo]
      )
 
 End, 
-FORMAT_STRING = Percent, 
+FORMAT_STRING = "Percent", 
+NON_EMPTY_BEHAVIOR = { [Cantidad Cajas Factor Objetivo] }, 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Clientes]
+ AS Case
+When IsEmpty
+     ( 
+        [Measures].[Cantidad Cajas]
+     ) 
+Then Null
+
+Else  
+       [Measures].[Cantidad de Clientes]
+     /
+     ( 
+       
+        iif([Articulo - Sabor].[Capacidad].currentmember.parent is null,
+        [Articulo - Sabor].[Capacidad].currentmember,
+        [Articulo - Sabor].[Capacidad].currentmember.parent) 
+        ,
+        iif([Articulo - Sabor].[Sabor].currentmember.parent is null,
+        [Articulo - Sabor].[Sabor].currentmember,
+        [Articulo - Sabor].[Sabor].currentmember.parent),
+        iif([Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent is null,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent),
+         
+       Root		
+       ( 
+         [Cliente]
+        ), 
+        iif([Articulo - Sabor].[Linea - Presentacion].currentmember.parent is null,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember.parent),  
+        iif([Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent),         
+        iif([Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent),
+        iif([Pedido - Estado].[Contado o Credito].currentmember.parent is null,
+        [Pedido - Estado].[Contado o Credito].currentmember,
+        [Pedido - Estado].[Contado o Credito].currentmember.parent),
+        iif([Pedido - Estado].[Estado].currentmember.parent is null,
+        [Pedido - Estado].[Estado].currentmember,
+        [Pedido - Estado].[Estado].currentmember.parent),
+        iif([Pedido - Estado].[Descuento].currentmember.parent is null,
+        [Pedido - Estado].[Descuento].currentmember,
+        [Pedido - Estado].[Descuento].currentmember.parent),
+        Root		
+       ( 
+           [Cliente - Ubicacion]
+        ), 
+        Root		
+       ( 
+         [Pedido - Codigo]
+        ), 
+       iif([Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent is null,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent),
+       iif([Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent),
+        Root		
+       ( 
+        [Vendedor]
+        ), 
+        [Measures].[Cantidad de Clientes]
+     )
+
+End, 
+FORMAT_STRING = "Percent", 
 NON_EMPTY_BEHAVIOR = { [Cantidad Cajas] }, 
-VISIBLE = 1  ; </Text>
+VISIBLE = 1  ; 
+CREATE MEMBER CURRENTCUBE.[MEASURES].[Participacion Cantidad Pedidos]
+ AS Case
+When IsEmpty
+     ( 
+        [Measures].[Cantidad Cajas]
+     ) 
+Then Null
+
+Else  
+       [Measures].[Cantidad de Pedidos]
+     /
+     ( 
+       
+        iif([Articulo - Sabor].[Capacidad].currentmember.parent is null,
+        [Articulo - Sabor].[Capacidad].currentmember,
+        [Articulo - Sabor].[Capacidad].currentmember.parent) 
+        ,
+        iif([Articulo - Sabor].[Sabor].currentmember.parent is null,
+        [Articulo - Sabor].[Sabor].currentmember,
+        [Articulo - Sabor].[Sabor].currentmember.parent),
+        iif([Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent is null,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember,
+        [Cliente - Expendio - Caracteristica].[Mercado - Expendio].currentmember.parent),
+         
+       Root		
+       ( 
+         [Cliente]
+        ), 
+        iif([Articulo - Sabor].[Linea - Presentacion].currentmember.parent is null,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember,
+        [Articulo - Sabor].[Linea - Presentacion].currentmember.parent),  
+        iif([Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Actualizacion].[Ano -  Mes -  Fecha].currentmember.parent),         
+        iif([Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember,
+        [Cliente - Fecha Registro].[Ano -  Mes -  Fecha].currentmember.parent),
+        iif([Pedido - Estado].[Contado o Credito].currentmember.parent is null,
+        [Pedido - Estado].[Contado o Credito].currentmember,
+        [Pedido - Estado].[Contado o Credito].currentmember.parent),
+        iif([Pedido - Estado].[Estado].currentmember.parent is null,
+        [Pedido - Estado].[Estado].currentmember,
+        [Pedido - Estado].[Estado].currentmember.parent),
+        iif([Pedido - Estado].[Descuento].currentmember.parent is null,
+        [Pedido - Estado].[Descuento].currentmember,
+        [Pedido - Estado].[Descuento].currentmember.parent),
+        Root		
+       ( 
+           [Cliente - Ubicacion]
+        ), 
+        Root		
+       ( 
+         [Pedido - Codigo]
+        ), 
+       iif([Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent is null,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember,
+        [Distrito - Ruta - Sector].[Distrito - Ruta - Sector].currentmember.parent),
+       iif([Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent is null,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember,
+        [Pedido - Fecha Vencimiento].[Ano -  Mes -  Fecha].currentmember.parent),
+        Root		
+       ( 
+        [Vendedor]
+        ), 
+        [Measures].[Cantidad de Pedidos]
+     )
+
+End, 
+FORMAT_STRING = "Percent", 
+NON_EMPTY_BEHAVIOR = { [Cantidad Cajas] }, 
+VISIBLE = 1  ; 
+</Text>
         </Command>
       </Commands>
       <CalculationProperties>
-        <CalculationProperty dwd:design-time-name="a6dda190-140d-4b7d-a66e-cc9c7b523f2f">
+        <CalculationProperty dwd:design-time-name="556b5b8c-fe89-48e0-abe1-298b3b5ceaa2">
           <CalculationReference>[MEASURES].[Cantidad de Clientes]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="16ff43b3-17ef-47c8-bbe1-482f71565af9">
+        <CalculationProperty dwd:design-time-name="d51dd69a-bb1c-4aa3-8ef2-e0f2705e9aac">
           <CalculationReference>[MEASURES].[Cantidad de Vendedores]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="5c3f56d6-a3ce-4eb6-8740-89e2126fadaa">
+        <CalculationProperty dwd:design-time-name="c9b096da-d061-45f8-a602-77bb1834c926">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="ac9aedf5-c830-491e-99a9-f6244bfc40b8">
+        <CalculationProperty dwd:design-time-name="fd85bc7f-23eb-4276-ba7b-6941270497c1">
           <CalculationReference>[MEASURES].[Cantidad de Pedidos con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="b56b4838-6a42-48fd-9378-ca3713d8e190">
+        <CalculationProperty dwd:design-time-name="e7842def-35e7-4079-b8ba-058fa4d9bbbd">
           <CalculationReference>[MEASURES].[Cantidad de Clientes con rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Rechazo Pedido</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="65539563-17b8-4c20-a052-d299cdb818ba">
+        <CalculationProperty dwd:design-time-name="bfc64562-bcfa-4045-9c52-b78e8f41781b">
           <CalculationReference>[MEASURES].[Cantidad de Cajas Objetivo]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos Objetivo Venta</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="e39c953b-2f44-44ac-9b07-969a7cf0c077">
+        <CalculationProperty dwd:design-time-name="7c626afb-53dc-4e28-9902-5f5da325d955">
           <CalculationReference>[MEASURES].[Total Bs con descuento y rechazos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="f4af6efa-b372-4fc6-90d3-a85329b3537d">
+        <CalculationProperty dwd:design-time-name="faf95a23-cd16-4f90-9f73-cbffca69cdff">
           <CalculationReference>Pedidos con Descuento</CalculationReference>
           <CalculationType>Set</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="85b88d3c-55b9-4829-89fa-99ffde2f7bba">
+        <CalculationProperty dwd:design-time-name="6e4f9de1-7f0f-4162-a3d7-7b68770b70cc">
           <CalculationReference>[MEASURES].[Participacion Cantidad Articulos]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
           <DisplayFolder>Participaciones</DisplayFolder>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="af09ce0c-9568-421e-b532-66869e7a8597">
+        <CalculationProperty dwd:design-time-name="ab6d84cf-ce58-4ba2-ab09-0c30851f8a47">
           <CalculationReference>[MEASURES].[Cantidad de Clientes en Hoja de Ruta]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Hoja De Ruta</AssociatedMeasureGroupID>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="95421ecd-50c1-48df-ac92-0b5ed03c893a">
+        <CalculationProperty dwd:design-time-name="2f6509fe-3001-4d37-bd8c-914b8cd3f814">
           <CalculationReference>[MEASURES].[Participacion Cantidad Cajas]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
           <DisplayFolder>Participaciones</DisplayFolder>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="ec20a328-b89d-40b5-8d36-9a4af39ad9e9">
+        <CalculationProperty dwd:design-time-name="564f939c-b2a5-42d4-8c6a-59b557cf3d81">
           <CalculationReference>[MEASURES].[Participacion Cantidad Cajas Factor Objetivo]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
           <DisplayFolder>Participaciones</DisplayFolder>
         </CalculationProperty>
-        <CalculationProperty dwd:design-time-name="c5b3865a-9379-4567-b7e4-374bc84be3fd">
+        <CalculationProperty dwd:design-time-name="947b9710-3128-4375-9585-b247bf30a9d9">
           <CalculationReference>[MEASURES].[Cantidad de Clientes Activos en Hoja de Ruta]</CalculationReference>
           <CalculationType>Member</CalculationType>
           <AssociatedMeasureGroupID>Fact Hoja De Ruta</AssociatedMeasureGroupID>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="53bfcd2d-3e54-478e-b2bc-bcf4f89b3f7f">
+          <CalculationReference>[MEASURES].[Participacion Cantidad Clientes]</CalculationReference>
+          <CalculationType>Member</CalculationType>
+          <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
+          <DisplayFolder>Participaciones</DisplayFolder>
+        </CalculationProperty>
+        <CalculationProperty dwd:design-time-name="76cac4f9-ba69-4cba-8ca4-83508ad8920f">
+          <CalculationReference>[MEASURES].[Participacion Cantidad Pedidos]</CalculationReference>
+          <CalculationType>Member</CalculationType>
+          <AssociatedMeasureGroupID>Fact Pedidos</AssociatedMeasureGroupID>
+          <DisplayFolder>Participaciones</DisplayFolder>
         </CalculationProperty>
       </CalculationProperties>
     </MdxScript>

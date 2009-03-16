@@ -12000,15 +12000,15 @@
         <Partition dwd:design-time-name="75785b20-429b-4ad3-ad7e-3e0768d74982">
           <ID>Fact Hoja De Ruta</ID>
           <Name>Fact Hoja De Ruta</Name>
-          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
           <Annotations>
             <Annotation>
               <Name>AggregationPercent</Name>
               <Value>60</Value>
             </Annotation>
           </Annotations>
-          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
           <State>Unprocessed</State>
           <Source xsi:type="DsvTableBinding" dwd:design-time-name="42ca839d-0239-4d51-aaa5-5123f7f161b3">
             <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
@@ -13010,6 +13010,26 @@
           </Aggregations>
         </AggregationDesign>
       </AggregationDesigns>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Visita Palm</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="331a0cad-d35d-4ab8-a4b7-d9b0a539f8af">
+          <ID>Fact Visita Palm</ID>
+          <Name>Fact Visita Palm</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0c09e448-446e-47f0-a368-a79b33b3691f">
+            <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+            <TableID>dbo_Fact_VisitaPalm</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
     </MeasureGroup>
   </MeasureGroups>
 </Cube>

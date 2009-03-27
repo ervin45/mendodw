@@ -13012,18 +13012,18 @@
       </AggregationDesigns>
     </MeasureGroup>
     <MeasureGroup>
-      <ID>Fact Visita Palm</ID>
+      <ID>V Fact Visitas Palm Pedidos</ID>
       <Partitions>
-        <Partition dwd:design-time-name="331a0cad-d35d-4ab8-a4b7-d9b0a539f8af">
-          <ID>Fact Visita Palm</ID>
-          <Name>Fact Visita Palm</Name>
+        <Partition dwd:design-time-name="fec96dac-bb06-4f4e-91f4-e811120a3868">
+          <ID>V Fact Visitas Palm Pedidos</ID>
+          <Name>V Fact Visitas Palm Pedidos</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0c09e448-446e-47f0-a368-a79b33b3691f">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e3e067c8-b038-4969-91e8-47602804e49a">
             <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
-            <TableID>dbo_Fact_VisitaPalm</TableID>
+            <TableID>V_Fact_Visitas_Palm_Pedidos</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>

@@ -1,0 +1,25 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="83d279a0-a527-4a52-b28a-b68ed6e269fc" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Visitas Palm</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Visita Palm</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8c1ecfc9-9665-4b14-b120-d83e0f892fa6">
+          <ID>Fact Visita Palm</ID>
+          <Name>Fact Visita Palm</Name>
+          <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8a157c68-6b47-4804-8884-7e310a4fab2f">
+            <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+            <TableID>dbo_Fact_VisitaPalm</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

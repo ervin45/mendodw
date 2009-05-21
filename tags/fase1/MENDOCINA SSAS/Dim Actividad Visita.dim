@@ -1,0 +1,213 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="41b6c6b4-afd9-497e-9cee-2bbbb001f2f4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Actividad Visita</ID>
+  <Name>Dim Actividad Visita</Name>
+  <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3751" scrolltop="-3969" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10954" y="12938" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_ActividadVisita (dbo.Dim_ActividadVisita)" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3413" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000550d000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_ActividadVisita" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3751</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3969</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="382bbe1b-e933-4d9f-8fdd-439bc93c56de">
+    <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission dwd:design-time-name="745de4c4-a033-4b4c-87a5-7d288bf97821">
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 1</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Attributes>
+    <Attribute dwd:design-time-name="3d09803f-1aee-442c-8354-1067659fd784">
+      <ID>Dim Actividad Visita</ID>
+      <Name>Dim Actividad Visita</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>29</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31af8bc4-81ef-4c90-ba1f-f967a8dada8c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="83b1aecd-1e8b-4cb7-9099-a25c77ca0824">
+            <TableID>dbo_Dim_ActividadVisita</TableID>
+            <ColumnID>actividadVisitaId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1c339c3d-ab36-4c38-85e2-c0f7c6f20d27">
+          <AttributeID>Exhibicion Desc</AttributeID>
+          <Name>Exhibicion</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c57788ee-c8c9-4f17-abaa-4035dd884e0b">
+          <AttributeID>u Frio Desc</AttributeID>
+          <Name>Utilizacion Frío</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="eb2ed698-6235-48d9-9a28-483814c75b0d">
+          <AttributeID>Marca Precio Desc</AttributeID>
+          <Name>Marca de Precio</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8ccb9577-5eea-4f9b-8a32-4c05fffb32a4">
+          <AttributeID>Afiche Desc</AttributeID>
+          <Name>Afiche</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f0d613af-4d2a-4274-be12-71ccef6b8865">
+          <AttributeID>Otros Desc</AttributeID>
+          <Name>Otras Actividades</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="b16adb2d-b656-4d57-91ca-307157352354">
+      <ID>Exhibicion Desc</ID>
+      <Name>Exhibicion</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e436665f-5020-44b3-a14a-0dd4a5d25413">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="34bbb633-01b5-4b67-8c0f-e591fdf3a646">
+            <TableID>dbo_Dim_ActividadVisita</TableID>
+            <ColumnID>exhibicionDesc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="9eb0627b-96c7-4cb6-9d3c-98e4ae0c10cc">
+      <ID>u Frio Desc</ID>
+      <Name>Utilizacion Frío</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7948274e-793d-44ce-989e-983c81f07ddd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="162d237d-b5d5-4759-ae1f-dc7bc1190759">
+            <TableID>dbo_Dim_ActividadVisita</TableID>
+            <ColumnID>uFrioDesc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="e2bf3ab8-9420-4be5-ae6c-c105c8c43ee8">
+      <ID>Marca Precio Desc</ID>
+      <Name>Marca de Precio</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d3d13463-2175-4429-a257-92a4ff0f7dd4">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="28de24c9-2952-433c-b698-cc707958ea52">
+            <TableID>dbo_Dim_ActividadVisita</TableID>
+            <ColumnID>marcaPrecioDesc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="b53cb78c-b401-4e51-811b-9172de996492">
+      <ID>Afiche Desc</ID>
+      <Name>Afiche</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2083cfb3-b4b2-4c67-b380-f68a945549c6">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="be114b18-4b77-4698-aa2b-44cff88da6fd">
+            <TableID>dbo_Dim_ActividadVisita</TableID>
+            <ColumnID>aficheDesc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="56b1f7f9-ede1-4ae2-944f-f6cd26cde8a9">
+      <ID>Otros Desc</ID>
+      <Name>Otras Actividades</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f39cb6e0-00c1-41a1-8f7e-95d6187d69ac">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7d90485f-a839-4a80-b4ae-cb4be291d38d">
+            <TableID>dbo_Dim_ActividadVisita</TableID>
+            <ColumnID>otrosDesc</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+  </Attributes>
+</Dimension>

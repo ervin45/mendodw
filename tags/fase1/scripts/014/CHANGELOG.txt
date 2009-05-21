@@ -1,0 +1,14 @@
+
+1 . Ejecutar Scripts sql en orden
+2 . Reemplazar T_PEDIDOS.dtsx
+3 . Hacer un deploy de la base de datos de analisis
+
+
+cambios realizados:
+
+1. Cantidad de clientes en hojas de ruta, numero incorrecto
+2. Mostrar el codigo de cliente en lugar del correlativo
+3. Mostrar el codigo del vendedor en lugar del correlativo
+4. Correccion en el calculo del descuento de los pedidos
+5. Mostrar cantidad de cajas objetivo en lugar de articulos objetiv
+6. Crear un perfil para obtencion de cubos locales

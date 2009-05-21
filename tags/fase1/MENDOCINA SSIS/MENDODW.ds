@@ -1,0 +1,9 @@
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="5aff88e2-3b14-4e9b-aa05-6b97bffeef9b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>MENDODW</ID>
+  <Name>MENDODW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <ConnectionString>Provider=SQLNCLI.1;Data Source=(local);Integrated Security=SSPI;Initial Catalog=MENDO_DW</ConnectionString>
+  <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+  <Timeout>PT0S</Timeout>
+</DataSource>

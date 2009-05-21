@@ -1,0 +1,301 @@
+<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1c892f2c-67e0-4b6f-a03f-2e39ee744c0e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Articulo Sabor</ID>
+  <Name>Dim Articulo Sabor</Name>
+  <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2797" scrolltop="-5543" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7752" y="11986" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_ArticuloSabor (dbo.Dim_ArticuloSabor)" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3096" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000180c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_ArticuloSabor" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2797</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5543</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="42db082c-5650-4729-ba74-95a5c1e4e840">
+    <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+  </Source>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission dwd:design-time-name="fdc88d95-38b1-4141-97a7-3b282872fd33">
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 1</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Attributes>
+    <Attribute dwd:design-time-name="a1303885-597d-46c2-ba5d-000b652cc830">
+      <ID>Dim Articulo Sabor</ID>
+      <Name>Dim Articulo Sabor</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>110</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4b7204d0-e12a-4f78-b7d4-e7b023be5778">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4d808c8c-6f9b-464a-8478-7f9ed23dfddd">
+            <TableID>dbo_Dim_ArticuloSabor</TableID>
+            <ColumnID>articuloSaborId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="093a8779-bfc6-4146-b425-4612c4939983">
+          <AttributeID>Articulo Abrev</AttributeID>
+          <Name>Articulo Abrev</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b46d8d8f-0452-4110-8ac1-e55696fe922f">
+          <AttributeID>Capacidad</AttributeID>
+          <Name>Capacidad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="731057d5-dcb8-46a9-ab6c-4f6cf6f78de7">
+          <AttributeID>Sabor Nombre</AttributeID>
+          <Name>Sabor</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="afdc39c7-54be-40eb-869c-a089eb688423">
+          <AttributeID>Retornable Desc</AttributeID>
+          <Name>Retornable</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fbc91738-6c27-45cd-8061-35d7877ae4dc">
+          <AttributeID>Articulo Nombre</AttributeID>
+          <Name>Artículo</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>List</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="b516e08e-618c-47df-bdc1-1dfe95f5bc19">
+      <ID>Linea Desc</ID>
+      <Name>Línea</Name>
+      <EstimatedCount>9</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f27962f7-d841-4d61-994a-273209f5f051">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e3635c6d-5c0d-47da-afa7-e221c7208afb">
+            <TableID>dbo_Dim_ArticuloSabor</TableID>
+            <ColumnID>lineaId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="181d1ef0-c6b9-4f9e-9fb0-d599ecdd5ea5">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f92ef365-1b1b-4312-a39a-f9594dc453f8">
+          <TableID>dbo_Dim_ArticuloSabor</TableID>
+          <ColumnID>lineaDesc</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="814e351f-8228-44f6-88bf-2bc8bcf7a400">
+      <ID>Articulo Nombre</ID>
+      <Name>Artículo</Name>
+      <EstimatedCount>51</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e2b99b82-44a8-40f7-a498-3f7311be242f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f396d4c-7262-4186-9879-5ecfc8b92b1d">
+            <TableID>dbo_Dim_ArticuloSabor</TableID>
+            <ColumnID>lineaId</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="0a753015-a281-4d6a-b127-e888d722d1bc">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dd57d956-b230-4bf9-a1b4-9e76ad15c8a7">
+            <TableID>dbo_Dim_ArticuloSabor</TableID>
+            <ColumnID>articuloId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ead88f51-7d25-46e2-b33f-871edd54da5e">
+        <DataType>WChar</DataType>
+        <DataSize>25</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f30f9ed0-1d44-4b28-905e-a680420d68fe">
+          <TableID>dbo_Dim_ArticuloSabor</TableID>
+          <ColumnID>articuloNombre</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="6906f8ad-0f53-49ba-abe4-9fa7f6a43b48">
+          <AttributeID>Linea Desc</AttributeID>
+          <Name>Línea</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="0d17d8df-58b1-496b-8b67-fbd6f81f96bd">
+      <ID>Articulo Abrev</ID>
+      <Name>Articulo Abrev</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2e322d6a-0cdd-4903-983f-b963f7a91c77">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6768a0c7-225c-4bf2-a8de-3b58bc7836d7">
+            <TableID>dbo_Dim_ArticuloSabor</TableID>
+            <ColumnID>articuloId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b4ce32df-fe3b-4ef4-b91a-e12b21b7b1e0">
+        <DataType>WChar</DataType>
+        <DataSize>9</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4b8e2c24-b565-4e66-9269-b3ee53dc0663">
+          <TableID>dbo_Dim_ArticuloSabor</TableID>
+          <ColumnID>articuloAbrev</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+    </Attribute>
+    <Attribute dwd:design-time-name="b47b3107-021b-4027-a15b-f136c046f9ed">
+      <ID>Capacidad</ID>
+      <Name>Capacidad</Name>
+      <EstimatedCount>8</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="12649803-1397-441c-9fe1-f5ba313c060c">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46195955-53ad-4fa3-8340-5089bff59044">
+            <TableID>dbo_Dim_ArticuloSabor</TableID>
+            <ColumnID>capacidad</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="8ccb4540-83b7-46fe-bb05-a4199e68b065">
+      <ID>Sabor Nombre</ID>
+      <Name>Sabor</Name>
+      <EstimatedCount>20</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="88d3f09b-9c3a-4654-857d-07d9921b5d48">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="603c37b1-9b15-4b4f-9672-acc18a95976c">
+            <TableID>dbo_Dim_ArticuloSabor</TableID>
+            <ColumnID>saborId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="03e1925f-f612-4e50-a246-47f12ae29d15">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="56fd2766-7385-4336-99e9-811f7fb60878">
+          <TableID>dbo_Dim_ArticuloSabor</TableID>
+          <ColumnID>saborNombre</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+    <Attribute dwd:design-time-name="3e40d1ff-eb84-490b-928b-7a18b8a70163">
+      <ID>Retornable Desc</ID>
+      <Name>Retornable</Name>
+      <EstimatedCount>2</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="30f760c4-065a-4051-b55e-5a61773f2d7f">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fce1887b-e54e-4830-afee-1d6e493a2cb3">
+            <TableID>dbo_Dim_ArticuloSabor</TableID>
+            <ColumnID>retornable</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6c551bb4-d808-447c-a229-b643c3359394">
+        <DataType>WChar</DataType>
+        <DataSize>13</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="26961b47-15fd-44b2-af93-264fee81329c">
+          <TableID>dbo_Dim_ArticuloSabor</TableID>
+          <ColumnID>retornableDesc</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <InstanceSelection>DropDown</InstanceSelection>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="154897a6-bcb9-41d3-9650-56ef77b5cc65">
+      <ID>Jerarquía</ID>
+      <Name>Linea - Presentacion</Name>
+      <Levels>
+        <Level dwd:design-time-name="f3c304aa-de29-4f67-a165-797aae8372e2">
+          <ID>Línea</ID>
+          <Name>Línea</Name>
+          <SourceAttributeID>Linea Desc</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="19908fdc-b577-4e26-9cd6-7c7ebcd6f500">
+          <ID>Artículo</ID>
+          <Name>Presentacion</Name>
+          <SourceAttributeID>Articulo Nombre</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

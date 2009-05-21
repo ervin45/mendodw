@@ -1,0 +1,269 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="58c0de47-be3c-4820-847d-e0218133c213" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Fecha Pedido</ID>
+  <Name>Dim Fecha Pedido</Name>
+  <CreatedTimestamp>0001-01-01T04:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T04:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2369" scrolltop="-4259" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10954" y="15637" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Dim_FechaPedido" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Dim_FechaPedido" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2369</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4259</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T04:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="05b462d9-a0a0-4e8a-b066-9a48379405cf">
+    <DataSourceViewID>Pedidos_dsv</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DimensionPermissions>
+    <DimensionPermission dwd:design-time-name="72181042-d859-4482-bc3a-d8cc176ecdf4">
+      <ID>DimensionPermission</ID>
+      <Name>DimensionPermission</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 1</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DimensionPermission>
+  </DimensionPermissions>
+  <Attributes>
+    <Attribute dwd:design-time-name="4dc887d2-3f7a-4325-b6cf-7602f2659c33">
+      <ID>Año</ID>
+      <Name>Ano</Name>
+      <Type>Years</Type>
+      <EstimatedCount>26</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b4543ba7-62af-4d34-892f-8cb1310ae1a8">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="81a31877-a26f-4d6d-9443-f10af1bec38c">
+            <TableID>Dim_FechaPedido</TableID>
+            <ColumnID>Ano</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7cf84e25-2a68-4594-bf63-c831ec511f45">
+        <DataType>WChar</DataType>
+        <DataSize>-1</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a9443ace-8d38-4b75-9b5d-d255283fc3f7">
+          <TableID>Dim_FechaPedido</TableID>
+          <ColumnID>Ano</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+    </Attribute>
+    <Attribute dwd:design-time-name="e4c1492d-201b-4347-b3d1-0b57f2bd4355">
+      <ID>Mes</ID>
+      <Name>Mes</Name>
+      <Type>Months</Type>
+      <EstimatedCount>23</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fe7531c6-34b2-478c-a010-a3ccb72d957f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d4ac1321-7aee-45a5-b4da-71f185e986d7">
+            <TableID>Dim_FechaPedido</TableID>
+            <ColumnID>Ano</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="c07c00f1-f11f-4212-ba26-d946caaeb852">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f528f987-c5dd-432f-b335-1e41145c20d4">
+            <TableID>Dim_FechaPedido</TableID>
+            <ColumnID>Mes</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d3cfe4bb-1f73-4f30-b197-16999bd0c0e3">
+        <DataType>WChar</DataType>
+        <DataSize>3</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a7807d4d-e481-42ee-ba2c-251a92482cd3">
+          <TableID>Dim_FechaPedido</TableID>
+          <ColumnID>mesAbv</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="be1c053a-819f-43b6-b95b-ae40d7d7f6d7">
+          <AttributeID>Año</AttributeID>
+          <Name>Ano</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+    </Attribute>
+    <Attribute dwd:design-time-name="d262e161-1fb9-4ea7-a8ae-96866ce2e398">
+      <ID>Fecha</ID>
+      <Name>Fecha</Name>
+      <Type>Days</Type>
+      <EstimatedCount>534</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7b1e8adf-61b4-4f63-a7b8-782c7c62c862">
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a9fd65d6-21cf-4ab5-9f9a-392b0e2905e1">
+            <TableID>Dim_FechaPedido</TableID>
+            <ColumnID>Fecha</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b8405d9b-381f-4cef-af17-8e1fb6fabb65">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ecdcace3-fc4e-42d0-895e-487ba448ef4d">
+          <TableID>Dim_FechaPedido</TableID>
+          <ColumnID>FechaName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ed744e77-9ec6-417d-a271-7755be54d170">
+          <AttributeID>Mes</AttributeID>
+          <Name>Mes</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+    </Attribute>
+    <Attribute dwd:design-time-name="88cf6e23-ea6b-4039-8056-ef0e4c2eb38d">
+      <ID>Día del mes</ID>
+      <Name>Dia</Name>
+      <Type>DayOfMonth</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ad82acc2-ff28-497c-bbb6-861ca10f7b41">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc5e6cbb-65c0-46c1-9079-d0b12a13e695">
+            <TableID>Dim_FechaPedido</TableID>
+            <ColumnID>Dia</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3658114e-5fbb-450d-bb4a-980d4dca5151">
+        <DataType>WChar</DataType>
+        <DataSize>-1</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="94d83e87-8879-4a14-927c-f781ef0a5eaa">
+          <TableID>Dim_FechaPedido</TableID>
+          <ColumnID>Dia</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+    </Attribute>
+    <Attribute dwd:design-time-name="97beee14-051b-4ee3-91c3-53570cd2c027">
+      <ID>FechaId</ID>
+      <Name>FechaId</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>9133</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dc5a13ed-b2d5-407a-97ce-86244df2f5a6">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5599dbe7-d690-4bee-a377-e7a328c46702">
+            <TableID>Dim_FechaPedido</TableID>
+            <ColumnID>FechaId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0c1c26f8-dcce-40e7-ade1-3fae2c6b3ad9">
+        <DataType>WChar</DataType>
+        <DataSize>-1</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="3b7f46f2-076d-478f-9919-36d630ad5c71">
+          <TableID>Dim_FechaPedido</TableID>
+          <ColumnID>FechaId</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="bf4f703a-24bb-4843-ae43-07c62de3097b">
+          <AttributeID>Fecha</AttributeID>
+          <Name>Fecha</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="00201c0a-793e-40fa-8e21-8375148491b7">
+          <AttributeID>Día del mes</AttributeID>
+          <Name>Dia</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="15c0a9a9-5eaf-4df9-b710-bdfcb0000df3">
+      <ID>Ano -  Mes -  Fecha</ID>
+      <Name>Ano -  Mes -  Fecha</Name>
+      <Levels>
+        <Level dwd:design-time-name="7e234f91-d7e4-445d-906b-f205742bc511">
+          <ID>Ano</ID>
+          <Name>Ano</Name>
+          <SourceAttributeID>Año</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="9b89a3c0-c2c3-4ac8-8501-8df8e521f67b">
+          <ID>Mes</ID>
+          <Name>Mes</Name>
+          <SourceAttributeID>Mes</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="cde1a79c-3728-4407-8902-399624347629">
+          <ID>Fecha</ID>
+          <Name>Fecha</Name>
+          <SourceAttributeID>Fecha</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

@@ -1,0 +1,5 @@
+1 . Ejecutar Scripts sql en orden
+2 . Reemplazar T_COMMON.dtsx
+3 . Ejecutar T_COMMON.dtsx
+4 . Ejecutar T_PEDIDOS.dtsx
+5 . Hacer un deploy de la base de datos de analisis

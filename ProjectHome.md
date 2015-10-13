@@ -1,0 +1,1 @@
+Un almacen de datos (DATAWAREHOUSE) sencillo que muestra el proceso de pedidos de una empresa de ventas al detalle
